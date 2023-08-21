@@ -8,7 +8,7 @@ const StepFinal = () => {
         <div className="flex flex-col items-center justify-center">
           <img src="/images/logo1.svg" alt="" />
           <h3 className="mt-5 text-lg font-semibold">Nice work!</h3>
-          <p className="text-center mt-5">Congratulations! You’ve taken the first step toward taking control of your electricity bill! We've matched you with the best solar companies in your area and they will contact you shortly!</p>
+          <p className="text-center mt-5">Congratulations! You have taken the first step toward taking control of your electricity bill! We've matched you with the best solar companies in your area and they will contact you shortly!</p>
         </div>
         <div className="flex flex-col items-center justify-center">
           <img src="/images/logo2.svg" alt="" />

@@ -4,7 +4,7 @@ import SimpleMultiStepForm from './components/SimpleMultiStepForm';
 
 
 
-const page = () => {
+const Page = () => {
   const [zip, setZip] = useState("");
   const [showForm, setShowForm] = useState(false);
   // console.log(`zip = ${zip} and zip length = ${zip.length} and show form = ${showForm}`)
@@ -52,4 +52,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
