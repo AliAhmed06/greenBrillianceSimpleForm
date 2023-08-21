@@ -28,7 +28,7 @@ const Step7 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
       <h1 className='mt-10 font-bold text-black text-3xl'>
         Approximately What Is Your Credit Score?
       </h1>
-      <p className="text-lg mt-5 w-[400px] text-center">Most homeowners finance their system, which generally requires a minimum credit score of 640 or higher</p>      
+      <p className="text-lg mt-5 md:w-[400px] text-center">Most homeowners finance their system, which generally requires a minimum credit score of 640 or higher</p>      
       <button
         className="bg-white w-[300px] py-5 px-5 hover:bg-yellow-400 font-bold text-xl mt-3"
         onClick={ () => Step7Handler("FAIR < 640") }

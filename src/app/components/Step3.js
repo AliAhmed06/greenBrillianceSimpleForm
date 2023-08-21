@@ -23,7 +23,7 @@ const Step3 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
       <h1 className='mt-10 font-bold text-black text-3xl'>
         How Much Is Your Average Monthly Electric Bill?
       </h1>
-      <p className="text-lg mt-5 w-[400px] text-center">To maximize savings, you must spend at least $100 per month on electricity.</p>      
+      <p className="text-lg mt-5 lg:w-[400px] text-center">To maximize savings, you must spend at least $100 per month on electricity.</p>      
       <button
         className="bg-white w-[300px] py-5 px-5 hover:bg-yellow-400 font-bold text-xl mt-10"
         onClick={ () => step3Handler("LESS THAN $100") }

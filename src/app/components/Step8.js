@@ -19,12 +19,12 @@ const Step8 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
       <input 
         type="text"  
         placeholder="Address"
-        className="w-[500px] py-5 px-10 rounded-sm outline-none border border-gray-400 mt-5"
+        className="w-[320px] md:w-[500px] py-5 px-10 rounded-sm outline-none border border-gray-400 mt-5"
         value={address}
         onChange={(e) => setAddress(e.target.value)}
         />
       <button
-        className="bg-yellow-400 w-[500px] py-5 px-10 hover:bg-opacity-80 font-bold text-xl mt-3"
+        className="bg-yellow-400 w-[320px] md:w-[500px] py-5 px-10 hover:bg-opacity-80 font-bold text-xl mt-3"
         onClick={ () => Step8Handler("NO SHADE") }
         disabled={address.length > 0 ? false : true}
         >CONTINUE</button>

@@ -21,8 +21,8 @@ const Page = () => {
     <div className='bg-gray-100 min-h-screen'>
       
       {showForm === false ? (
-        <div className='flex items-center justify-between '>
-          <div className='w-[60%] px-[200px] '>
+        <div className='flex flex-col-reverse lg:flex-row items-center justify-between '>
+          <div className='lg:w-[60%] px-[50px] lg:px-[200px] mt-20'>
             <div className='bg-gray-400 w-fit py-2 px-5 rounded-full text-white'>You may be eligible for zero down solar!</div>
             <h3 className='text-5xl text-blue-900 font-bold mt-5'>DO YOU QUALIFY?</h3>
             <p className='text-lg font-semibold mt-10'>Enter your zip code to see how much you could save</p>
@@ -39,7 +39,7 @@ const Page = () => {
               className='bg-yellow-400 py-5 px-10 w-full rounded-sm text-center text-lg font-bold mt-5 hover:bg-opacity-80'
               >GET STARTED</button>
           </div>
-          <div className='w-[40%] '>
+          <div className='w-[70%] lg:w-[40%] '>
             <img src="/images/hero-image.png" className='w-full h-full object-cover' alt="" />
           </div>
         </div>

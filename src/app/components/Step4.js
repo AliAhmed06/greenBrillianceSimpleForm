@@ -27,25 +27,25 @@ const Step4 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
       <h1 className='mt-10 font-bold text-black text-3xl'>
         Who Is Your Electricity Provider?
       </h1>
-      <p className="text-lg mt-5 w-[400px] text-center">Lets make sure your electric provider has a homeowner solar program.</p>      
+      <p className="text-lg mt-5 md:w-[400px] text-center">Lets make sure your electric provider has a homeowner solar program.</p>      
       <button
-        className="bg-white w-[600px] py-5 px-10 hover:bg-yellow-100 rounded-t-md font-semibold mt-10 text-start"
+        className="bg-white w-[320px] md:w-[600px] py-5 px-10 hover:bg-yellow-100 rounded-t-md font-semibold mt-10 text-start"
         onClick={ () => Step4Handler("ConEd, subsidiary of Consolidated Edison") }
         >ConEd, subsidiary of Consolidated Edison</button>
       <button
-        className="bg-white w-[600px] py-5 px-10 hover:bg-yellow-100 border-t border-gray-200 font-semibold text-start"
+        className="bg-white w-[320px] md:w-[600px] py-5 px-10 hover:bg-yellow-100 border-t border-gray-200 font-semibold text-start"
         onClick={ () => Step4Handler("National Grid") }
         >National Grid</button>
       <button
-        className="bg-white w-[600px] py-5 px-10 hover:bg-yellow-100 border-t border-gray-200 font-semibold text-start"
+        className="bg-white w-[320px] md:w-[600px] py-5 px-10 hover:bg-yellow-100 border-t border-gray-200 font-semibold text-start"
         onClick={ () => Step4Handler("New York Power Authority (NYPA)") }
         >New York Power Authority (NYPA)</button>
       <button
-        className="bg-white w-[600px] py-5 px-10 hover:bg-yellow-100 border-t border-gray-200 font-semibold text-start"
+        className="bg-white w-[320px] md:w-[600px] py-5 px-10 hover:bg-yellow-100 border-t border-gray-200 font-semibold text-start"
         onClick={ () => Step4Handler("NYSEG: New York State Electric and Gas Corporation") }
         >NYSEG: New York State Electric and Gas Corporation</button>
       <button
-        className="bg-white w-[600px] py-5 px-10 hover:bg-yellow-100 rounded-b-md border-t border-gray-200 font-semibold text-start"
+        className="bg-white w-[320px] md:w-[600px] py-5 px-10 hover:bg-yellow-100 rounded-b-md border-t border-gray-200 font-semibold text-start"
         onClick={ () => Step4Handler("Other") }
         >Other</button>
       

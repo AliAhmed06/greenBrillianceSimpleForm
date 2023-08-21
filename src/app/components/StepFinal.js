@@ -4,7 +4,7 @@ const StepFinal = () => {
       <h3 className="text-6xl text-blue-800 font-bold text-center">Thank you!</h3>
       <p className="text-center mt-5 text-lg font-semibold">Here is what happens next!</p>
 
-      <div className="flex gap-10 mt-20">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-20">
         <div className="flex flex-col items-center justify-center">
           <img src="/images/logo1.svg" alt="" />
           <h3 className="mt-5 text-lg font-semibold">Nice work!</h3>

@@ -13,10 +13,10 @@ const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
       <h1 className='mt-10 font-bold text-black text-3xl'>
         Why Are You Considering Going Solar?
       </h1>
-      <p className="text-lg mt-5 w-[400px] text-center">Modifications/expansions of existing solar systems must be handled by the original installer</p>      
+      <p className="text-lg mt-5 md:w-[400px] text-center">Modifications/expansions of existing solar systems must be handled by the original installer</p>      
       <p className="border border-yellow-400 py-2 px-5 rounded-md w-[300px] text-center font-semibold text-lg my-5">Select all that apply</p>
 
-        <div className="gap-3 bg-white w-[450px] py-5 px-10 flex items-center justify-start ">
+        <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start ">
           <input 
             type="checkbox" 
             name="whySolary" 
@@ -28,7 +28,7 @@ const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
           <label htmlFor="v1">Save On Electricity Bills</label>
         </div>
 
-        <div className="gap-3 bg-white w-[450px] py-5 px-10 flex items-center justify-start ">
+        <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start ">
           <input 
             type="checkbox" 
             name="whySolary" 
@@ -39,7 +39,7 @@ const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
           <label htmlFor="v2">Earn Tax Credits and Rebates</label>
         </div>
 
-        <div className="gap-3 bg-white w-[450px] py-5 px-10 flex items-center justify-start ">
+        <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start ">
           <input 
             type="checkbox" 
             name="whySolary" 
@@ -50,7 +50,7 @@ const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
           <label htmlFor="v3">Do My Part to Save The Environment</label>
         </div>
 
-        <div className="gap-3 bg-white w-[450px] py-5 px-10 flex items-center justify-start ">
+        <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start ">
           <input 
             type="checkbox" 
             name="whySolary" 
@@ -63,7 +63,7 @@ const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
 
         
         <button
-          className='px-5 py-3 bg-yellow-400 w-[450px] rounded-md mt-5 text-black underline font-semibold'
+          className='px-5 py-3 bg-yellow-400 w-[320px] md:w-[450px] rounded-md mt-5 text-black underline font-semibold'
           onClick={Step6Handler}
         >
           Next
