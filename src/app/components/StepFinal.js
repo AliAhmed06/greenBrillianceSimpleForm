@@ -2,13 +2,13 @@ const StepFinal = () => {
   return (
     <div>
       <h3 className="text-6xl text-blue-800 font-bold text-center">Thank you!</h3>
-      <p className="text-center mt-5 text-lg font-semibold">Here's what happens next!</p>
+      <p className="text-center mt-5 text-lg font-semibold">Here is what happens next!</p>
 
       <div className="flex gap-10 mt-20">
         <div className="flex flex-col items-center justify-center">
           <img src="/images/logo1.svg" alt="" />
           <h3 className="mt-5 text-lg font-semibold">Nice work!</h3>
-          <p className="text-center mt-5">Congratulations! You have taken the first step toward taking control of your electricity bill! We've matched you with the best solar companies in your area and they will contact you shortly!</p>
+          <p className="text-center mt-5">Congratulations! You have taken the first step toward taking control of your electricity bill! We have matched you with the best solar companies in your area and they will contact you shortly!</p>
         </div>
         <div className="flex flex-col items-center justify-center">
           <img src="/images/logo2.svg" alt="" />
