@@ -1,7 +1,7 @@
 const StepFinal = () => {
   return (
-    <div>
-      <h3 className="text-6xl text-blue-800 font-bold text-center">Thank you!</h3>
+    <div className="text-white">
+      <h3 className="text-6xl text-white font-bold text-center">Thank you!</h3>
       <p className="text-center mt-5 text-lg font-semibold">Here is what happens next!</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-20">

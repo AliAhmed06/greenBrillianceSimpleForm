@@ -21,37 +21,42 @@ const Step5 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
   }
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className='mt-10 font-bold text-black text-3xl'>
+   <div className="flex flex-col lg:flex-row items-center justify-center">
+      <div className="lg:w-[40%]">
+        <img src="/images/step5.png" alt="" className="lg:mt-20" />
+      </div>
+     <div className="flex flex-col items-center justify-center lg:w-[60%]">
+      <h1 className='font-bold text-3xl text-white px-3 md:px-0'>
         How Much Shade Does Your Roof Get?
       </h1>
-      <p className="text-lg mt-5 w-[400px] text-center">Heavily shaded homes may require tree trimming or removal as a condition of going solar</p>      
+      <p className="text-lg mt-5 w-[400px] text-center text-white">Heavily shaded homes may require tree trimming or removal as a condition of going solar</p>      
       <button
-        className="bg-white w-[300px] py-5 px-5 hover:bg-yellow-400 font-bold text-xl mt-3"
+        className="stepButton1"
         onClick={ () => Step5Handler("NO SHADE") }
         >NO SHADE</button>
       <button
-        className="bg-white w-[300px] py-5 px-5 hover:bg-yellow-400 font-bold text-xl mt-3"
+        className="stepButton1"
         onClick={ () => Step5Handler("A LITTLE SHADE") }
         >A LITTLE SHADE</button>
       
       <button
-        className="bg-white w-[300px] py-5 px-5 hover:bg-yellow-400 font-bold text-xl mt-3"
+        className="stepButton1"
         onClick={ () => Step5Handler("A LOT OF SHADE") }
         >A LOT OF SHADE</button>
 
       <button
-        className="bg-white w-[300px] py-5 px-5 hover:bg-yellow-400 font-bold text-xl mt-3"
+        className="stepButton1"
         onClick={ () => Step5Handler("UNCERTAIN") }
         >UNCERTAIN</button>
         
         <button
-          className='px-4 py-2 rounded-xl mt-5 text-black underline font-semibold'
+          className='px-4 py-2 rounded-xl mt-5 text-white underline font-semibold'
           onClick={handlePrevStep}
         >
           Go Back
         </button>
     </div>
+   </div>
   );
 };
 

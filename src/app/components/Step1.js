@@ -1,4 +1,4 @@
-const Step1 = ({ formData, handleChangeInput, handleNextStep, handleSubmitFormData }) => {
+const Step1 = ({ formData, handleChangeInput, handleNextStep, handleSubmitFormData, handlePrevStep }) => {
   const step1Handler = (val) => {
     if(val == "yes"){
       handleChangeInput("is_owner", "yes")      
@@ -11,18 +11,25 @@ const Step1 = ({ formData, handleChangeInput, handleNextStep, handleSubmitFormDa
   }
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className='mt-10 font-bold text-black text-3xl'>
+    <div className="flex flex-col items-center justify-center  mt-20">
+      <h1 className='mt-10 font-bold text-white text-4xl pb-10'>
         Are You A Homeowner?
       </h1>
       <button
-        className="bg-white w-[300px] py-5 px-10 hover:bg-yellow-400 font-bold text-xl mt-10"
+        className="stepButton1"
         onClick={ () => step1Handler("yes") }
         >YES</button>
       <button
-        className="bg-white w-[300px] py-5 px-10 hover:bg-red-500 font-bold text-xl mt-3"
+        className="stepButton1"
         onClick={ () => step1Handler("no") }
         >NO</button>
+      
+      <button
+          className='px-4 py-2 rounded-xl mt-5 text-white underline font-semibold'
+          onClick={handlePrevStep}
+        >
+          Go Back
+        </button>
       
     </div>
   );

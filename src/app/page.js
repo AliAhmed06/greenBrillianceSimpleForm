@@ -4,6 +4,8 @@ import SimpleMultiStepForm from './components/SimpleMultiStepForm';
 
 
 
+
+
 const Page = () => {
   const [zip, setZip] = useState("");
   const [showForm, setShowForm] = useState(false);
@@ -18,36 +20,87 @@ const Page = () => {
   }
 
   return (
-    <div className='bg-gray-100 min-h-screen'>
-      
-      {showForm === false ? (
-        <div className='flex flex-col-reverse lg:flex-row items-center justify-between '>
-          <div className='lg:w-[60%] px-[50px] lg:px-[200px] mt-20'>
-            <div className='bg-gray-400 w-fit py-2 px-5 rounded-full text-white'>You may be eligible for zero down solar!</div>
-            <h3 className='text-5xl text-blue-900 font-bold mt-5'>DO YOU QUALIFY?</h3>
-            <p className='text-lg font-semibold mt-10'>Enter your zip code to see how much you could save</p>
-            <input 
-              type="text" 
-              placeholder='Your Zip Code *' 
-              className='text-gray-600 outline-none border border-gray-400 py-5 px-10 rounded-sm w-full mt-5'
-              value={zip}
-              onChange={(e)=>setZip(e.target.value)}
-            />
-            <button
-              disabled={zip === "" ? true : false}
-              onClick={ showFormHandler }
-              className='bg-yellow-400 py-5 px-10 w-full rounded-sm text-center text-lg font-bold mt-5 hover:bg-opacity-80'
-              >GET STARTED</button>
-          </div>
-          <div className='w-[70%] lg:w-[40%] '>
-            <img src="/images/hero-image.png" className='w-full h-full object-cover' alt="" />
+    <div className='min-h-screen'>      
+      <SimpleMultiStepForm showStepNumber={true} />
+      <div className=''>
+        
+        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl'>
+          <h3 className='font-bold text-3xl text-[#865bf4] text-center lg:text-start'>WHAT DOES SOLAR COST?</h3>
+          <div className='flex flex-col-reverse lg:flex-row mt-5 '>
+            <div className='lg:w-[80%]'>
+              <p className='text-lg'>We are disappointed when we see solar companies use language like <span className='font-bold'> Free</span> to get your attention...because it just is not true. Going solar WILL cost you money…but for the right candidates, the benefits of going solar far outweigh the cost of going solar…plain and simple. Making the move to solar even more attractive are the various incentives offered by the Federal Government and by many states, who offer tax incentives and rebates to help make your decision to switch more fiscally sound. Buyer beware…there are no free lunches!</p>
+            </div>
+            <div className='lg:w-[20%] flex items-center justify-center'>
+              <img src="/images/logo4.png" alt="" className='h-[100px]' />
+            </div>
           </div>
         </div>
-      ) : (
-        <SimpleMultiStepForm showStepNumber={true} />
-      )}
-      
-      {/* <SimpleMultiStepForm showStepNumber={true} /> */}
+
+        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10'>
+          <h3 className='font-bold text-3xl text-[#865bf4] text-center lg:text-start'>CAN YOUR ROOF SUPPORT PANELS?</h3>
+          <div className='flex flex-col-reverse lg:flex-row mt-5 '>
+            <div className='lg:w-[80%]'>
+              <p className='text-lg'>Solar panels are a long-term investment. BUT, since it is a long term investment, you will want to make sure that your roof is fairly new and in great shape. You would not want to invest in installing solar panels only to remove them 2 years down the road to repair or replace your roof. If your roof is older than 15 years, it is generally a good idea to replace your roof first. The good news is that most reputable solar companies can provide both a roof replacement AND an expert installation!</p>
+            </div>
+            <div className='lg:w-[20%] flex items-center justify-center'>
+              <img src="/images/logo5.png" alt="" className='h-[100px]' />
+            </div>
+          </div>
+        </div>
+
+        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10'>
+          <h3 className='font-bold text-3xl text-[#865bf4] text-center lg:text-start'>HOW IS YOUR CREDIT?</h3>
+          <div className='flex flex-col-reverse lg:flex-row mt-5 '>
+            <div className='lg:w-[80%]'>
+              <p className='text-lg'>As mentioned above, solar is not free. In fact, most rooftop solar installations will cost between $10,000 and $30,000! That is why the vast majority of homeowners choose to finance the purchase over 10 to 20 years. And in order to qualify for the most competitive finance rates, you will need to have good credit…a score of 640 or higher will do the trick!</p>
+            </div>
+            <div className='lg:w-[20%] flex items-center justify-center'>
+              <img src="/images/logo6.png" alt="" className='h-[100px]' />
+            </div>
+          </div>
+        </div>
+
+        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10'>
+          <h3 className='font-bold text-3xl text-[#865bf4] text-center lg:text-start'>FEDERAL TAX CREDITS & OTHER INCENTIVES</h3>
+          <div className='flex flex-col-reverse lg:flex-row mt-5 '>
+            <div className='lg:w-[80%]'>
+              <p className='text-lg'>It is no secret that the Federal Government wants you to use clean energy. To incentivize you to make the move, the Government is making available a 30% TAX CREDIT! That is essentially a 30% discount on the cost of your solar system. Additionally, there may be local and state incentives available to you, as well…all of which will be explained when we have a chance to talk!</p>
+            </div>
+            <div className='lg:w-[20%] flex items-center justify-center'>
+              <img src="/images/logo7.png" alt="" className='h-[100px]' />
+            </div>
+          </div>
+        </div>
+
+        <div className='flex flex-col items-center justify-center mt-10 p-10'>
+          <img src="/images/logo8.png" alt="" className='h-[120px]' />
+          <p className='text-3xl text-white font-bold mt-5 text-center'>4 EASY STEPS TO GET YOUR <br /> FREE SOLAR PANEL QUOTE</p>
+        </div>
+
+        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10'>
+          <h3 className='font-bold text-3xl text-[#865bf4] text-center lg:text-start'>1 ENTER YOUR ZIP CODE</h3>
+          <p className='mt-5 text-lg'>Allows us to find the best solar installers in your area as well as the best incentives and credits.</p>
+        </div>
+
+        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10'>
+          <h3 className='font-bold text-3xl text-[#865bf4] text-center lg:text-start'>2 ENTER YOUR MONTHLY POWER BILL</h3>
+          <p className='mt-5 text-lg'>This is one of the key factors in determining if solar is a smart move for you!</p>
+        </div>
+
+        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10'>
+          <h3 className='font-bold text-3xl text-[#865bf4] text-center lg:text-start'>3 ENTER YOUR UTILITY PROVIDER</h3>
+          <p className='mt-5 text-lg'>Sharing your utility provider with us allows us to understand what you are paying per kWh…another key factor to understanding if the move to solar makes sense.</p>
+        </div>
+
+        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10'>
+          <h3 className='font-bold text-3xl text-[#865bf4] text-center lg:text-start'>4 ENTER YOUR ROOF SHADE</h3>
+          <p className='mt-5 text-lg'>Understanding this helps us determine how much sunlight your roof sees during the course of the day…the last key element in matching you up with the right solar company.</p>
+        </div>
+
+        <div className='flex items-center justify-center mt-5 mb-20'>          
+          <a href="/" className='stepButton1 text-center'>SEE IF YOU QUALIFY</a>
+        </div>
+      </div>
     </div>
   );
 };

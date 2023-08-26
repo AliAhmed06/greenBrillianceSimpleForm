@@ -1,3 +1,6 @@
+import LottieAnimation from "./LootieAnimations";
+import animationData from '../../../public/lootieAnimations/step3.json';
+
 const Step3 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) => {
   const step3Handler = (val) => {
     if(val == "LESS THAN $100"){
@@ -19,35 +22,40 @@ const Step3 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
   }
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className='mt-10 font-bold text-black text-3xl'>
-        How Much Is Your Average Monthly Electric Bill?
-      </h1>
-      <p className="text-lg mt-5 lg:w-[400px] text-center">To maximize savings, you must spend at least $100 per month on electricity.</p>      
-      <button
-        className="bg-white w-[300px] py-5 px-5 hover:bg-yellow-400 font-bold text-xl mt-10"
-        onClick={ () => step3Handler("LESS THAN $100") }
-        >LESS THAN $100</button>
-      <button
-        className="bg-white w-[300px] py-5 px-5 hover:bg-yellow-400 font-bold text-xl mt-3"
-        onClick={ () => step3Handler("$100 - $200") }
-        >$100 - $200</button>
-      <button
-        className="bg-white w-[300px] py-5 px-5 hover:bg-yellow-400 font-bold text-xl mt-3"
-        onClick={ () => step3Handler("$201 - $300") }
-        >$201 - $300</button>
-      
-      <button
-        className="bg-white w-[300px] py-5 px-5 hover:bg-yellow-400 font-bold text-xl mt-3"
-        onClick={ () => step3Handler("MORE THAN $300") }
-        >MORE THAN $300</button>
+    <div className="flex flex-col lg:flex-row items-center justify-center">
+      <div className="lg:w-[50%]">
+        <LottieAnimation animationData={animationData} />
+      </div>
+       <div className="flex flex-col items-center justify-center lg:w-[50%]">
+        <h1 className=' font-bold text-3xl text-white px-3 md:px-0'>
+          How Much Is Your Average Monthly Electric Bill?
+        </h1>
+        <p className="text-lg mt-5 w-[400px] text-center text-white">To maximize savings, you must spend at least $100 per month on electricity.</p>      
+        <button
+          className="stepButton1"
+          onClick={ () => step3Handler("LESS THAN $100") }
+          >LESS THAN $100</button>
+        <button
+          className="stepButton1"
+          onClick={ () => step3Handler("$100 - $200") }
+          >$100 - $200</button>
+        <button
+          className="stepButton1"
+          onClick={ () => step3Handler("$201 - $300") }
+          >$201 - $300</button>
         
         <button
-          className='px-4 py-2 rounded-xl mt-5 text-black underline font-semibold'
-          onClick={handlePrevStep}
-        >
-          Go Back
-        </button>
+          className="stepButton1"
+          onClick={ () => step3Handler("MORE THAN $300") }
+          >MORE THAN $300</button>
+          
+          <button
+            className='px-4 py-2 rounded-xl mt-5 text-black underline font-semibold text-white'
+            onClick={handlePrevStep}
+          >
+            Go Back
+          </button>
+      </div>
     </div>
   );
 };
