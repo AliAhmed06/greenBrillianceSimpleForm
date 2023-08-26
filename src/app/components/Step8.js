@@ -2,10 +2,15 @@ import { useState } from "react";
 
 const Step8 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) => {
   const [address, setAddress] = useState("");
-
+  const [addressError, setAddressError] = useState("")
   const Step8Handler = (val) => {
-      handleChangeInput("address", address)      
-      handleNextStep();    
+      if(address === ""){
+        setAddressError("Address is required")
+      }
+      else{
+        handleChangeInput("address", address)      
+        handleNextStep();    
+      }
   }
 
   // console.log(address.length);
@@ -27,10 +32,11 @@ const Step8 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
           value={address}
           onChange={(e) => setAddress(e.target.value)}
           />
+          { addressError !== "" && <p className="text-red-500 font-semibold">{addressError}</p> }
         <button
           className="w-[320px] md:w-[500px] stepButton2"
           onClick={ () => Step8Handler("NO SHADE") }
-          disabled={address.length > 0 ? false : true}
+          // disabled={address.length > 0 ? false : true}
           >CONTINUE</button>
           
           <button

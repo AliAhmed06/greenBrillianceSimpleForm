@@ -1,4 +1,5 @@
 const Step1 = ({ formData, handleChangeInput, handleNextStep, handleSubmitFormData, handlePrevStep }) => {
+  
   const step1Handler = (val) => {
     if(val == "yes"){
       handleChangeInput("is_owner", "yes")      

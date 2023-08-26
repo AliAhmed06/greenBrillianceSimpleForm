@@ -2,10 +2,21 @@ import { useState } from "react";
 
 const Step9 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) => {
   const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
 
   const Step9Handler = (val) => {
-      handleChangeInput("email", email)      
-      handleNextStep();    
+      if(email === ""){
+        setEmailError("Email is required")
+      }
+      else if(!email.match(validRegex)){
+        setEmailError("Email is not correct")
+      }
+      else{
+        handleChangeInput("email", email)      
+        handleNextStep();    
+      }
   }
 
   // console.log(address.length);
@@ -24,10 +35,11 @@ const Step9 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         />
+        { emailError !== "" && <p className="text-red-500 font-semibold">{emailError}</p> }
       <button
         className="w-[320px] md:w-[500px] stepButton2"
         onClick={ () => Step9Handler("NO SHADE") }
-        disabled={email.length > 0 ? false : true}
+        // disabled={email.length > 0 ? false : true}
         >GET YOUR SOLAR QUOTE</button>
         
         <button

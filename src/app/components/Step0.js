@@ -5,10 +5,16 @@ import animationData from '../../../public/lootieAnimations/dot.json';
 
 const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
     const [zip, setZip] = useState("");
-    
+    const [zipError, setZipError] = useState("")
+
     const Step0Handler = (val) => {
-        handleChangeInput("zip", zip)      
-        handleNextStep(); 
+        if(zip === ""){
+            setZipError("Zip is required")
+        }        
+        else{
+            handleChangeInput("zip", zip)      
+            handleNextStep(); 
+        }
     }
   
     return (
@@ -27,8 +33,9 @@ const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
                 value={zip}
                 onChange={(e)=>setZip(e.target.value)}
             />
+            { zipError !== "" && <p className="text-red-500 font-semibold">{zipError}</p> }
             <button
-                disabled={zip === "" ? true : false}
+                // disabled={zip === "" ? true : false}
                 onClick={ () => Step0Handler() }
                 className='bg-white text-[#6946DD] rounded-xl py-4 px-10 w-full cursor-pointer text-center text-lg font-bold mt-5 hover:bg-opacity-80'
             >GET STARTED</button>

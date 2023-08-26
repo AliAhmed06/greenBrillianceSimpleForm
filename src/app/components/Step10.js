@@ -1,16 +1,40 @@
 import { useState } from "react";
 
 const Step10 = ({ formData, handleChangeInput, handleSubmitFormData, handlePrevStep }) => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [phone, setPhone] = useState("");
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
+  // const [phone, setPhone] = useState("");
 
-  const Step10Handler = async (val) => {
-      if(formData.firstName === "" || formData.lastName === "" || formData.phone === ""){
-        return alert("All fields are required");
+  const [firstNameError, setFirstNameError] = useState("");
+  const [lastNameError, setLastNameError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  
+  const Step10Handler = () => {
+      // console.log(`f = ${formData.first_name} and l = ${formData.last_name} and ph = ${formData.phone}`);
+      if(formData.first_name === ""){
+        setFirstNameError("first name is required")
+      }
+      else{
+        setFirstNameError("")
+      }
+      
+      if(formData.last_name === ""){
+        setLastNameError("last name is required");
+      }
+      else{
+        setLastNameError("");
       }
 
-      handleSubmitFormData();    
+      if(formData.phone === ""){
+        setPhoneError("phone is required");
+      }
+      else{
+        setPhoneError("");
+      }
+
+      if(formData.firstName !== "" && formData.lastName !== "" && formData.phone !== ""){
+        handleSubmitFormData();    
+      }
   }
 
   // console.log(address.length);
@@ -29,6 +53,7 @@ const Step10 = ({ formData, handleChangeInput, handleSubmitFormData, handlePrevS
         value={formData.firstName}
         onChange={(e) => handleChangeInput("first_name", e.target.value) }
         />
+        { firstNameError !== "" && <p className="text-red-500 font-semibold">{firstNameError}</p> }
       <input 
         type="text"  
         placeholder="Last Name"
@@ -36,6 +61,7 @@ const Step10 = ({ formData, handleChangeInput, handleSubmitFormData, handlePrevS
         value={formData.lastName}
         onChange={(e) => handleChangeInput("last_name", e.target.value) }
         />
+        { lastNameError !== "" && <p className="text-red-500 font-semibold">{lastNameError}</p> }
       <input 
         type="number"  
         placeholder="Phone Number"
@@ -43,10 +69,11 @@ const Step10 = ({ formData, handleChangeInput, handleSubmitFormData, handlePrevS
         value={formData.phone}
         onChange={(e) => handleChangeInput("phone", e.target.value) }
         />
+        { phoneError !== "" && <p className="text-red-500 font-semibold">{phoneError}</p> }
       <button
         className="w-[320px] md:w-[500px] stepButton2"
-        // onClick={ () => Step10Handler("NO SHADE") }        
-        onClick={handleSubmitFormData}
+        onClick={ () => Step10Handler() }        
+        // onClick={handleSubmitFormData}
         >GET YOUR SOLAR QUOTE</button>
         
         <button
