@@ -102,13 +102,13 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
             {index > 0 && (
               <div
                 className={`h-[5px] md:w-[20px] ${
-                  index + 1 === parseInt(step) ? 'bg-yellow-400' : 'bg-white'
+                  index + 1 === parseInt(step) ? 'bg-white' : 'bg-white'
                 }`}
                 
               />
             )}
             <div
-              className={`w-7 md:w-9 h-7 md:h-9 flex justify-center items-center border-2 border-gray-600 rounded-full cursor-pointer ${
+              className={`w-7 md:w-9 h-7 md:h-9 flex justify-center items-center drop-shadow-lg text-[#865bf4] rounded-full ${
                 parseInt(item) + 1 === parseInt(step) ? 'bg-yellow-400' : 'bg-white'
               }`}
             >
@@ -117,7 +117,7 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
             {index < stepsArray.length - 1 && (
               <div
                 className={`h-[5px] lg:w-[20px] ${
-                  index + 1 === parseInt(step) ? 'bg-yellow-400' : 'bg-white'
+                  index + 1 === parseInt(step) ? 'bg-white' : 'bg-white'
                 }`}
                 
               />

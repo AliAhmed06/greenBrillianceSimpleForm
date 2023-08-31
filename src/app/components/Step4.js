@@ -33,28 +33,28 @@ const Step4 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         </h1>
         <p className="text-lg mt-5 w-[400px] text-center text-white">Lets make sure your electric provider has a homeowner solar program.</p>      
         <button
-          className="bg-white w-[320px] md:w-[600px] py-5 px-10 hover:bg-yellow-100 rounded-t-md font-semibold mt-10 text-start"
+          className="stepButton2 md:w-[600px]"
           onClick={ () => Step4Handler("ConEd, subsidiary of Consolidated Edison") }
           >ConEd, subsidiary of Consolidated Edison</button>
         <button
-          className="bg-white w-[320px] md:w-[600px] py-5 px-10 hover:bg-yellow-100 border-t border-gray-200 font-semibold text-start"
+          className="stepButton2 w-[600px]"
           onClick={ () => Step4Handler("National Grid") }
           >National Grid</button>
         <button
-          className="bg-white w-[320px] md:w-[600px] py-5 px-10 hover:bg-yellow-100 border-t border-gray-200 font-semibold text-start"
+          className="stepButton2 w-[600px]"
           onClick={ () => Step4Handler("New York Power Authority (NYPA)") }
           >New York Power Authority (NYPA)</button>
         <button
-          className="bg-white w-[320px] md:w-[600px] py-5 px-10 hover:bg-yellow-100 border-t border-gray-200 font-semibold text-start"
+          className="stepButton2 w-[600px]"
           onClick={ () => Step4Handler("NYSEG: New York State Electric and Gas Corporation") }
           >NYSEG: New York State Electric and Gas Corporation</button>
         <button
-          className="bg-white w-[320px] md:w-[600px] py-5 px-10 hover:bg-yellow-100 rounded-b-md border-t border-gray-200 font-semibold text-start"
+          className="stepButton2 w-[600px]"
           onClick={ () => Step4Handler("Other") }
           >Other</button>
         
           <button
-            className='px-4 py-2 rounded-xl mt-5 text-black underline font-semibold'
+            className='px-4 py-2 rounded-xl mt-5 underline font-semibold text-white'
             onClick={handlePrevStep}
           >
             Go Back

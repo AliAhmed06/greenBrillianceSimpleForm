@@ -1,6 +1,6 @@
 import LottieAnimation from "./LootieAnimations";
 import animationData from '../../../public/lootieAnimations/step3.json';
-
+import animation2Data from '../../../public/lootieAnimations/step3_2.json';
 const Step3 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) => {
   const step3Handler = (val) => {
     if(val == "LESS THAN $100"){
@@ -25,6 +25,8 @@ const Step3 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
     <div className="flex flex-col lg:flex-row items-center justify-center">
       <div className="lg:w-[50%]">
         <LottieAnimation animationData={animationData} />
+        {/* <LottieAnimation animation2Data={animationData} /> */}
+        aaa
       </div>
        <div className="flex flex-col items-center justify-center lg:w-[50%]">
         <h1 className=' font-bold text-3xl text-white px-3 md:px-0'>

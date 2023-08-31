@@ -11,5 +11,5 @@
 }
 
 .stepField{
-    @apply outline-none border bg-transparent rounded-xl text-white placeholder-gray-300 border-gray-400 py-4 px-10  mt-5
+    @apply outline-none border bg-transparent rounded-xl text-white placeholder-gray-300 border-gray-400 py-4 px-10  mt-5 focus:border-white
 }

@@ -1,4 +1,6 @@
 "use client"
+import LottieAnimation from "./LootieAnimations";
+import animationData from '../../../public/lootieAnimations/step8.json';
 import { useState } from "react";
 import Autocomplete from "react-google-autocomplete";
 
@@ -19,7 +21,7 @@ const Step8 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center">
       <div className="lg:w-[40%]">
-        {/* <img src="/images/step6.png" alt="" className="lg:mt-20" /> */}
+        <LottieAnimation animationData={animationData} />
       </div>
       <div className="flex flex-col items-center justify-center lg:w-[60%] mt-20 lg:mt-32">
         <h1 className='font-bold text-3xl text-white px-3 md:px-0'>

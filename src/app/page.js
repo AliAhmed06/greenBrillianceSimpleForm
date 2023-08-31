@@ -22,7 +22,7 @@ const Page = () => {
   return (
     <div className='min-h-screen'>      
       <SimpleMultiStepForm showStepNumber={true} />
-      <div className=''>
+      <div className='mt-10'>
         
         <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl'>
           <h3 className='font-bold text-3xl text-[#865bf4] text-center lg:text-start'>WHAT DOES SOLAR COST?</h3>

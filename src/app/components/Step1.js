@@ -1,3 +1,6 @@
+import LottieAnimation from "./LootieAnimations";
+import animationData from '../../../public/lootieAnimations/step1.json';
+
 const Step1 = ({ formData, handleChangeInput, handleNextStep, handleSubmitFormData, handlePrevStep }) => {
   
   const step1Handler = (val) => {
@@ -12,27 +15,32 @@ const Step1 = ({ formData, handleChangeInput, handleNextStep, handleSubmitFormDa
   }
 
   return (
-    <div className="flex flex-col items-center justify-center  mt-20">
-      <h1 className='mt-10 font-bold text-white text-4xl pb-10'>
-        Are You A Homeowner?
-      </h1>
-      <button
-        className="stepButton1"
-        onClick={ () => step1Handler("yes") }
-        >YES</button>
-      <button
-        className="stepButton1"
-        onClick={ () => step1Handler("no") }
+    <div className="flex flex-col lg:flex-row items-center justify-center mt-20">
+      <div className="lg:w-[50%]">
+        <LottieAnimation animationData={animationData} />
+      </div>
+      <div className="flex flex-col items-center justify-center lg:w-[50%]">
+        <h1 className='mt-10 font-bold text-3xl text-white px-3 md:px-0'>
+          Are You A Homeowner?
+        </h1>
+        <button
+          className="stepButton1"
+          onClick={ () => step1Handler("yes") }
+          >YES</button>
+        <button
+          className="stepButton1"
+          onClick={ () => step1Handler("no") }
         >NO</button>
+          
+          <button
+            className='px-4 py-2 rounded-xl mt-5 underline font-semibold text-white'
+            onClick={handlePrevStep}
+          >
+            Go Back
+          </button>
+      </div>
       
-      <button
-          className='px-4 py-2 rounded-xl mt-5 text-white underline font-semibold'
-          onClick={handlePrevStep}
-        >
-          Go Back
-        </button>
-      
-    </div>
+    </div>    
   );
 };
 
