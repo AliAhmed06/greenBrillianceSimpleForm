@@ -1,3 +1,5 @@
+import Footer from './components/Footer/Footer'
+import Header from './components/Header/Header'
 import './globals.css'
 
 export const metadata = {
@@ -8,8 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#8157fc]">
+      <body className="bg-[#235c94]">
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

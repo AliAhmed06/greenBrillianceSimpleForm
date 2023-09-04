@@ -20,7 +20,7 @@ const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
     return (
     <div className='flex flex-col-reverse lg:flex-row items-center justify-center'>
         <div className='lg:w-[50%] md:px-[50px]   '>
-            <div className='bg-[#ffd75d] lg:w-[450px] py-1 px-7 rounded-full text-[#6946DD] flex text-lg items-center gap-3 '>
+            <div className='bg-[#ffd75d] lg:w-[450px] py-1 px-7 rounded-full text-[#235c94] flex text-lg items-center gap-3 '>
                 <div className="h-[40px] w-[40px] ">
                     <LottieAnimation animationData={animationData}  />
                 </div>
@@ -40,7 +40,7 @@ const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
             <button
                 // disabled={zip === "" ? true : false}
                 onClick={ () => Step0Handler() }
-                className='bg-white text-[#6946DD] rounded-xl py-4 px-10 w-full lg:w-[70%] cursor-pointer text-center text-lg font-bold mt-5 hover:bg-opacity-80'
+                className='bg-white text-[#235c94] rounded-xl py-4 px-10 w-full lg:w-[70%] cursor-pointer text-center text-lg font-bold mt-5 hover:bg-opacity-80'
             >GET STARTED</button>
         </div>
         <div className='lg:w-[50%] '>

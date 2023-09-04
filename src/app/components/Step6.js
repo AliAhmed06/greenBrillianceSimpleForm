@@ -20,7 +20,7 @@ const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         <p className="text-lg mt-5 w-[400px] text-center text-white mb-5">Modifications/expansions of existing solar systems must be handled by the original installer</p>      
         {/* <p className="border border-yellow-400 py-2 px-5 rounded-md w-[300px] text-center font-semibold text-lg my-5">Select all that apply</p> */}
 
-          <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start rounded-t-xl text-[#6946DD] font-semibold">
+          <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start rounded-t-xl text-[#235c94] font-semibold">
             <input 
               type="checkbox" 
               name="whySolary" 
@@ -32,7 +32,7 @@ const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
             <label htmlFor="v1">Save On Electricity Bills</label>
           </div>
 
-          <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start text-[#6946DD] font-semibold">
+          <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start text-[#235c94] font-semibold">
             <input 
               type="checkbox" 
               name="whySolary" 
@@ -43,7 +43,7 @@ const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
             <label htmlFor="v2">Earn Tax Credits and Rebates</label>
           </div>
 
-          <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start text-[#6946DD] font-semibold">
+          <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start text-[#235c94] font-semibold">
             <input 
               type="checkbox" 
               name="whySolary" 
@@ -54,7 +54,7 @@ const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
             <label htmlFor="v3">Do My Part to Save The Environment</label>
           </div>
 
-          <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start text-[#6946DD] font-semibold rounded-b-xl">
+          <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start text-[#235c94] font-semibold rounded-b-xl">
             <input 
               type="checkbox" 
               name="whySolary" 

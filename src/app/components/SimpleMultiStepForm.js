@@ -96,7 +96,7 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
       return null;
     }
     return (
-        <section className='mt-2 mb-4 flex items-center justify-center'>
+        <section className='mb-4 flex items-center justify-center mt-5'>
         {stepsArray.map((item, index) => (
           <div key={item} className='flex items-center'>
             {index > 0 && (
@@ -132,7 +132,7 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
 
   return (
     <div className='w-full flex items-center justify-center'>
-        <div className='w-[80%] min-h-[800px] mt-20 '>
+        <div className='w-[80%] min-h-[800px]'>
         {renderTopStepNumbers()}
 
         {/* // Render Steps */}
