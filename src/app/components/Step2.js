@@ -28,7 +28,7 @@ const Step2 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         <LottieAnimation animationData={animationData} />
       </div>
       <div className="flex flex-col items-center justify-center lg:w-[50%]">
-        <h1 className='mt-10 font-bold text-3xl text-white px-3 md:px-0'>
+        <h1 className='mt-10 font-bold text-3xl text-white px-8 md:px-0'>
           What Type Of Home Do You Live In?
         </h1>
         <p className="text-lg mt-5 w-[400px] text-center text-white">The type of home you own can impact the incentives that are available to you</p>      
