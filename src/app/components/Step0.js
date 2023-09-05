@@ -36,7 +36,7 @@ const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
             { zipError !== "" && <p className="text-red-500 font-semibold">{zipError}</p> }
             <button
                 onClick={ () => Step0Handler() }
-                className='bg-white text-[#235c94] rounded-xl py-4 px-10 w-full lg:w-[70%] cursor-pointer text-center text-lg font-bold mt-5 hover:bg-opacity-80'
+                className='bg-white font-SagoeBold text-[#235c94] rounded-xl py-4 px-10 w-full lg:w-[70%] cursor-pointer text-center text-lg font-bold mt-5 hover:bg-opacity-80'
             >GET STARTED</button>
         </div>
         <div className='lg:w-[50%] '>

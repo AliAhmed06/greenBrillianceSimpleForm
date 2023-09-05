@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <div className='bg-white text-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-10 py-10 lg:px-28 lg:py-20 gap-10'>
         <div className='lg:col-span-2 lg:px-10'>
-            <div className='text-3xl font-extrabold flex flex-col items-center w-fit gap-1 mb-5'>
-                <h2 className='text-[#153456]'>About Us</h2>
+            <div className='text-4xl font-extrabold flex flex-col items-center w-fit gap-1 mb-5'>
+                <h2 className='text-[#153456] font-Teko'>About Us</h2>
                 <div className='bg-[#f8ba4d] h-[2px] w-[60px]'></div>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, itaque nisi dolor quae, accusamus rem corrupti tempora quis eveniet iusto pariatur et labore fugit consectetur, eum obcaecati minima? Officiis, illum?</p>
@@ -19,8 +19,8 @@ const Footer = () => {
         </div>
 
         <div className=''>
-            <div className='text-3xl font-extrabold flex flex-col items-center w-fit gap-1 mb-5'>
-                <h2 className='text-[#153456]'>Legal</h2>
+            <div className='text-4xl font-extrabold flex flex-col items-center w-fit gap-1 mb-5'>
+                <h2 className='text-[#153456] font-Teko'>Legal</h2>
                 <div className='bg-[#f8ba4d] h-[2px] w-[60px]'></div>
             </div>
             <div className='flex flex-col gap-3 mt-5'>
@@ -40,8 +40,8 @@ const Footer = () => {
         </div>
 
         <div className=''>
-            <div className='text-3xl font-extrabold flex flex-col items-center w-fit gap-1 mb-5'>
-                <h2 className='text-[#153456]'>Contact Us</h2>
+            <div className='text-4xl font-extrabold flex flex-col items-center w-fit gap-1 mb-5'>
+                <h2 className='text-[#153456] font-Teko'>Contact Us</h2>
                 <div className='bg-[#f8ba4d] h-[2px] w-[60px]'></div>
             </div>
             <div className='flex flex-col gap-3'>

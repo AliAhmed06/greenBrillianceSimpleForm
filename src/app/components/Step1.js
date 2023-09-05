@@ -19,8 +19,8 @@ const Step1 = ({ formData, handleChangeInput, handleNextStep, handleSubmitFormDa
       <div className="lg:w-[50%]">
         <LottieAnimation animationData={animationData} />
       </div>
-      <div className="flex flex-col items-center justify-center lg:w-[50%]">
-        <h1 className='mt-10 font-bold text-3xl text-white px-3 md:px-0'>
+      <div className="flex flex-col items-center justify-center lg:w-[50%] ">
+        <h1 className='mt-10 font-bold text-3xl text-white px-3 md:px-0 '>
           Are You A Homeowner?
         </h1>
         <button
