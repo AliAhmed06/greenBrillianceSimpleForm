@@ -32,10 +32,10 @@ const Step7 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         <LottieAnimation animationData={animationData} />
       </div>
       <div className="flex flex-col items-center justify-center lg:w-[50%]">
-        <h1 className='font-bold text-3xl text-white px-3 md:px-0'>
+        <h1 className='font-bold text-3xl text-white px-8 md:px-0'>
           Approximately What Is Your Credit Score?
         </h1>
-        <p className="text-lg mt-5 w-[400px] text-center text-white">Most homeowners finance their system, which generally requires a minimum credit score of 640 or higher</p>      
+        <p className="text-lg mt-5 w-[400px] text-center text-white px-8 md:px-0">Most homeowners finance their system, which generally requires a minimum credit score of 640 or higher</p>      
         <button
           className={`${formData.credit_score === "FAIR < 640" ? "stepButton2Active" : "stepButton2"} w-[300px] lg:w-[400px]`}          
           onClick={ () => Step7Handler("FAIR < 640") }

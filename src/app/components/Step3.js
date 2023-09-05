@@ -26,13 +26,13 @@ const Step3 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
       <div className="lg:w-[50%]">
         <LottieAnimation animationData={animationData} />
         {/* <LottieAnimation animation2Data={animationData} /> */}
-        aaa
+        
       </div>
-       <div className="flex flex-col items-center justify-center lg:w-[50%]">
-        <h1 className=' font-bold text-3xl text-white px-3 md:px-0'>
+       <div className="flex flex-col items-center justify-center lg:w-[50%] ">
+        <h1 className=' font-bold text-3xl text-white px-8 md:px-0'>
           How Much Is Your Average Monthly Electric Bill?
         </h1>
-        <p className="text-lg mt-5 w-[400px] text-center text-white">To maximize savings, you must spend at least $100 per month on electricity.</p>      
+        <p className="text-lg mt-5 w-[400px] text-center text-white px-8 md:px-0">To maximize savings, you must spend at least $100 per month on electricity.</p>      
         <button
           className={`${formData.monthly_bill === "LESS THAN $100" ? "stepButton1Active" : "stepButton1"} `}
           onClick={ () => step3Handler("LESS THAN $100") }

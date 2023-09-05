@@ -15,10 +15,10 @@ const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         <img src="/images/step6.png" alt="" className="lg:mt-20" />
       </div>
       <div className="flex flex-col items-center justify-center lg:w-[60%]">
-        <h1 className='font-bold text-3xl text-white px-3 md:px-0'>
+        <h1 className='font-bold text-3xl text-white px-8 md:px-0'>
           Why Are You Considering Going Solar?
         </h1>
-        <p className="text-lg mt-5 w-[400px] text-center text-white mb-5">Modifications/expansions of existing solar systems must be handled by the original installer</p>              
+        <p className="text-lg mt-5 w-[400px] text-center text-white mb-5 px-8 md:px-0">Modifications/expansions of existing solar systems must be handled by the original installer</p>              
           <div className="gap-3 bg-white w-[320px] md:w-[450px] py-5 px-10 flex items-center justify-start rounded-t-xl text-[#235c94] font-semibold">
             <input 
               defaultChecked={formData.why_solar[0] === "Save On Electricity Bills" ? true : false}

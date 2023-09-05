@@ -26,10 +26,10 @@ const Step5 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         <img src="/images/step5.png" alt="" className="lg:mt-20" />
       </div>
      <div className="flex flex-col items-center justify-center lg:w-[60%]">
-      <h1 className='font-bold text-3xl text-white px-3 md:px-0'>
+      <h1 className='font-bold text-3xl text-white px-8 md:px-0'>
         How Much Shade Does Your Roof Get?
       </h1>
-      <p className="text-lg mt-5 w-[400px] text-center text-white">Heavily shaded homes may require tree trimming or removal as a condition of going solar</p>      
+      <p className="text-lg mt-5 w-[400px] text-center text-white px-8 md:px-0">Heavily shaded homes may require tree trimming or removal as a condition of going solar</p>      
       <button
         className={`${formData.shade_measurement === "NO SHADE" ? "stepButton1Active" : "stepButton1"} `}
         onClick={ () => Step5Handler("NO SHADE") }
