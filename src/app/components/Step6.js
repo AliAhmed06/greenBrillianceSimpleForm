@@ -1,12 +1,21 @@
+import { useState } from "react";
+
 const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) => {
+  const [error, setError] = useState("");
+  
   const Step6Handler = (val) => {
     let whySolar = [];
     document.querySelectorAll('input[name="whySolary"]:checked').forEach( function(e) {
       whySolar.push(e.value);
     });    
 
-    handleChangeInput("why_solar", whySolar);      
-    handleNextStep();
+    if(whySolar.length === 0){
+      setError("You have to select atleast 1 field");
+    }
+    else{
+      handleChangeInput("why_solar", whySolar);      
+      handleNextStep();
+    }
   }
 
   return (
@@ -65,10 +74,10 @@ const Step6 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
               value="I Want to Replace My Current System"
               id="v4"
               />
-            <label htmlFor="v4">I Want to Replace My Current System</label>
+            <label htmlFor="v4">I Want to Replace My Current System</label>            
           </div>
 
-          
+          { error !== "" && <p className="text-red-500 font-semibold">{error}</p> }
           <button
             className='stepButton2 w-[320px] md:w-[450px]'
             onClick={Step6Handler}

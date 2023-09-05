@@ -15,6 +15,7 @@ import Step10 from './Step10';
 import Step11 from './Step11';
 import StepFinal from './StepFinal';
 import StepFinalFailed from './StepFinalFailed';
+import axios from 'axios';
 
 const initialFormData = {
   zip: '',
@@ -75,7 +76,7 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
   };
 
   // We need a method to do final operation
-  const handleSubmitFormData = () => {
+  const handleSubmitFormData = async () => {
     // Here You can do final Validation and then Submit Your form
     setStep('Final');
     // if (formData.is_owner === "no") {
@@ -83,7 +84,27 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
     // } else {
     // //   console.log(formData);
     // }
-    
+    try {
+      const data = {
+        "address": formData.address,
+        "credit_score": formData.credit_score,
+        "electricity_provider": formData.electricity_provider,
+        "email": formData.email,
+        "first_name": formData.first_name,
+        "type_of_home": formData.home_type,
+        "is_home_owner": 1,
+        "last_name": formData.last_name,
+        "average_monthly_bill": formData.monthly_bill,
+        "phone": formData.phone,
+        "shade": formData.shade_measurement,
+        "zip": formData.zip,
+        "solar_considering": formData.why_solar
+      }
+      const response =  await axios.post("https://api.solarenergypros.org/api/solar_inquiries", data);
+      console.log("ali response is = ", response);
+    } catch (error) {
+      console.log("there is some error/exception", error);
+    }
   };
 
   useEffect(() => {
