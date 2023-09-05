@@ -32,21 +32,21 @@ const Step2 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
           What Type Of Home Do You Live In?
         </h1>
         <p className="text-lg mt-5 w-[400px] text-center text-white">The type of home you own can impact the incentives that are available to you</p>      
-        <button
-          className="stepButton1"
+        <button          
+          className={`${formData.home_type === "SINGLE FAMILY HOME" ? "stepButton1Active" : "stepButton1"} `}
           onClick={ () => step2Handler("SINGLE FAMILY HOME") }
           >SINGLE FAMILY HOME</button>
         <button
-          className="stepButton1"
+          className={`${formData.home_type === "TOWNHOME" ? "stepButton1Active" : "stepButton1"} `}
           onClick={ () => step2Handler("TOWNHOME") }
           >TOWNHOME</button>
         <button
-          className="stepButton1"
+          className={`${formData.home_type === "MULTI-FAMILY" ? "stepButton1Active" : "stepButton1"} `}
           onClick={ () => step2Handler("MULTI-FAMILY") }
           >MULTI-FAMILY</button>
         
         <button
-          className="stepButton1"
+          className={`${formData.home_type === "MOBILE HOME" ? "stepButton1Active" : "stepButton1"} `}
           onClick={ () => step2Handler("MOBILE HOME") }
           >MOBILE HOME</button>
           

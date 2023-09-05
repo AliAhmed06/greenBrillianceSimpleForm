@@ -5,14 +5,13 @@ import { useState } from "react";
 import Autocomplete from "react-google-autocomplete";
 
 const Step8 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) => {
-  const [address, setAddress] = useState("");
   const [addressError, setAddressError] = useState("")
   const Step8Handler = (val) => {
-      if(address === ""){
+      if(formData.address === ""){
         setAddressError("Address is required")
       }
       else{
-        handleChangeInput("address", address)      
+        
         handleNextStep();    
       }
   }
@@ -30,9 +29,10 @@ const Step8 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         <p className="text-lg mt-5 w-[400px] text-center text-white mb-5">Lets make sure your home is eligible!</p>      
         <Autocomplete
           apiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY}
-          onPlaceSelected={(place) => setAddress(place.formatted_address)}
+          onPlaceSelected={(place) => handleChangeInput("address", place.formatted_address) }
           className="stepField w-[320px] md:w-[500px]"
           placeholder="Address"
+          defaultValue={formData.address}
           // value={address}
           // onChange={(e) => setAddress(e.target.value)}
         />

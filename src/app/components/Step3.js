@@ -34,25 +34,25 @@ const Step3 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         </h1>
         <p className="text-lg mt-5 w-[400px] text-center text-white">To maximize savings, you must spend at least $100 per month on electricity.</p>      
         <button
-          className="stepButton1"
+          className={`${formData.monthly_bill === "LESS THAN $100" ? "stepButton1Active" : "stepButton1"} `}
           onClick={ () => step3Handler("LESS THAN $100") }
           >LESS THAN $100</button>
         <button
-          className="stepButton1"
+          className={`${formData.monthly_bill === "$100 - $200" ? "stepButton1Active" : "stepButton1"} `}
           onClick={ () => step3Handler("$100 - $200") }
           >$100 - $200</button>
         <button
-          className="stepButton1"
+          className={`${formData.monthly_bill === "$201 - $300" ? "stepButton1Active" : "stepButton1"} `}
           onClick={ () => step3Handler("$201 - $300") }
           >$201 - $300</button>
         
         <button
-          className="stepButton1"
+          className={`${formData.monthly_bill === "MORE THAN $300" ? "stepButton1Active" : "stepButton1"} `}
           onClick={ () => step3Handler("MORE THAN $300") }
           >MORE THAN $300</button>
           
           <button
-            className='px-4 py-2 rounded-xl mt-5 text-black underline font-semibold text-white'
+            className='px-4 py-2 rounded-xl mt-5 underline font-semibold text-white'
             onClick={handlePrevStep}
           >
             Go Back

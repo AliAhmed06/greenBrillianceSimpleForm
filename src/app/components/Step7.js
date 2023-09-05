@@ -37,26 +37,26 @@ const Step7 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         </h1>
         <p className="text-lg mt-5 w-[400px] text-center text-white">Most homeowners finance their system, which generally requires a minimum credit score of 640 or higher</p>      
         <button
-          className="stepButton2 w-[300px] lg:w-[400px]"
+          className={`${formData.credit_score === "FAIR < 640" ? "stepButton2Active" : "stepButton2"} w-[300px] lg:w-[400px]`}          
           onClick={ () => Step7Handler("FAIR < 640") }
           >FAIR &lt; 640</button>
         <button
-          className="stepButton2 w-[300px] lg:w-[400px]"
+          className={`${formData.credit_score === "GOOD 640 - 739" ? "stepButton2Active" : "stepButton2"} w-[300px] lg:w-[400px]`}          
           onClick={ () => Step7Handler("GOOD 640 - 739") }
           >GOOD 640 - 739</button>
         
         <button
-          className="stepButton2 w-[300px] lg:w-[400px]"
+          className={`${formData.credit_score === "VERY GOOD 740 - 799" ? "stepButton2Active" : "stepButton2"} w-[300px] lg:w-[400px]`}          
           onClick={ () => Step7Handler("VERY GOOD 740 - 799") }
           >VERY GOOD 740 - 799</button>
 
         <button
-          className="stepButton2 w-[300px] lg:w-[400px]"
+          className={`${formData.credit_score === "EXCELLENT > 800" ? "stepButton2Active" : "stepButton2"} w-[300px] lg:w-[400px]`}          
           onClick={ () => Step7Handler("EXCELLENT > 800") }
           >EXCELLENT &gt; 800</button>
 
         <button
-          className="stepButton2 w-[300px] lg:w-[400px]"
+          className={`${formData.credit_score === "UNSURE" ? "stepButton2Active" : "stepButton2"} w-[300px] lg:w-[400px]`}          
           onClick={ () => Step7Handler("UNSURE") }
           >UNSURE</button>
           

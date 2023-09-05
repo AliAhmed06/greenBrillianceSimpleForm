@@ -31,21 +31,21 @@ const Step5 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
       </h1>
       <p className="text-lg mt-5 w-[400px] text-center text-white">Heavily shaded homes may require tree trimming or removal as a condition of going solar</p>      
       <button
-        className="stepButton1"
+        className={`${formData.shade_measurement === "NO SHADE" ? "stepButton1Active" : "stepButton1"} `}
         onClick={ () => Step5Handler("NO SHADE") }
         >NO SHADE</button>
       <button
-        className="stepButton1"
+        className={`${formData.shade_measurement === "A LITTLE SHADE" ? "stepButton1Active" : "stepButton1"} `}
         onClick={ () => Step5Handler("A LITTLE SHADE") }
         >A LITTLE SHADE</button>
       
       <button
-        className="stepButton1"
+        className={`${formData.shade_measurement === "A LOT OF SHADE" ? "stepButton1Active" : "stepButton1"} `}
         onClick={ () => Step5Handler("A LOT OF SHADE") }
         >A LOT OF SHADE</button>
 
       <button
-        className="stepButton1"
+        className={`${formData.shade_measurement === "UNCERTAIN" ? "stepButton1Active" : "stepButton1"} `}
         onClick={ () => Step5Handler("UNCERTAIN") }
         >UNCERTAIN</button>
         

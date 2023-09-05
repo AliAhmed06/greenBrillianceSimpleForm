@@ -4,15 +4,13 @@ import animationData from '../../../public/lootieAnimations/dot1.json';
 
 
 const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
-    const [zip, setZip] = useState("");
     const [zipError, setZipError] = useState("")
 
     const Step0Handler = (val) => {
-        if(zip === ""){
+        if(formData.zip === ""){
             setZipError("Zip is required")
         }        
         else{
-            handleChangeInput("zip", zip)      
             handleNextStep(); 
         }
     }
@@ -24,7 +22,6 @@ const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
                 <div className="h-[40px] w-[40px] ">
                     <LottieAnimation animationData={animationData}  />
                 </div>
-                {/* <div className="w-[15px] h-[15px] bg-red-700 rounded-full hidden md:block"></div> */}
                 <p>You may be eligible for zero down solar!</p>
             </div>
             <h3 className='text-4xl text-white font-bold mt-5 leading-[50px]'>DO YOU <br /> QUALIFY?</h3>
@@ -33,12 +30,11 @@ const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
                 type="text" 
                 placeholder='Your Zip Code *' 
                 className='stepField w-full lg:w-[70%]'
-                value={zip}
-                onChange={(e)=>setZip(e.target.value)}
+                value={formData.zip}
+                onChange={(e) => handleChangeInput("zip", e.target.value) }                
             />
             { zipError !== "" && <p className="text-red-500 font-semibold">{zipError}</p> }
             <button
-                // disabled={zip === "" ? true : false}
                 onClick={ () => Step0Handler() }
                 className='bg-white text-[#235c94] rounded-xl py-4 px-10 w-full lg:w-[70%] cursor-pointer text-center text-lg font-bold mt-5 hover:bg-opacity-80'
             >GET STARTED</button>

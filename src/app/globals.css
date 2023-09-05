@@ -6,11 +6,19 @@
     @apply bg-white w-[300px] py-3 px-5 hover:bg-yellow-400 font-bold lg:text-2xl rounded-xl text-[#f8ba4d] hover:text-white mt-3
 }
 .stepButton1{
-    @apply bg-white w-[300px] py-3 px-5 hover:bg-yellow-400 font-bold lg:text-xl rounded-xl text-[#235c94] hover:text-white mt-3
+    @apply w-[300px] py-3 px-5 font-bold lg:text-xl rounded-xl  mt-3 bg-white hover:bg-yellow-400 text-[#235c94] hover:text-white
+}
+
+.stepButton1Active{
+    @apply w-[300px] py-3 px-5 font-bold lg:text-xl rounded-xl  mt-3 bg-yellow-400 text-white
 }
 
 .stepButton2{
-    @apply bg-white py-3 px-5 hover:bg-yellow-400 font-bold text-xl rounded-xl text-[#235c94] hover:text-white mt-3
+    @apply  py-3 px-5 font-bold text-xl rounded-xl  mt-3 hover:bg-yellow-400 text-[#235c94] hover:text-white bg-white
+}
+
+.stepButton2Active{
+    @apply  py-3 px-5 font-bold text-xl rounded-xl  mt-3 bg-yellow-400 text-white 
 }
 
 .stepField{

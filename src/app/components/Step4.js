@@ -33,23 +33,24 @@ const Step4 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         </h1>
         <p className="text-lg mt-5 w-[400px] text-center text-white">Lets make sure your electric provider has a homeowner solar program.</p>      
         <button
-          className="stepButton2 md:w-[600px]"
+          className={`${formData.electricity_provider === "ConEd, subsidiary of Consolidated Edison" ? "stepButton2Active" : "stepButton2"} w-[350px] md:w-[600px]`}
+          // className="stepButton2 w-[350px] md:w-[600px]"
           onClick={ () => Step4Handler("ConEd, subsidiary of Consolidated Edison") }
           >ConEd, subsidiary of Consolidated Edison</button>
         <button
-          className="stepButton2 w-[600px]"
+          className={`${formData.electricity_provider === "National Grid" ? "stepButton2Active" : "stepButton2"} w-[350px] md:w-[600px]`}
           onClick={ () => Step4Handler("National Grid") }
           >National Grid</button>
         <button
-          className="stepButton2 w-[600px]"
+          className={`${formData.electricity_provider === "New York Power Authority (NYPA)" ? "stepButton2Active" : "stepButton2"} w-[350px] md:w-[600px]`}
           onClick={ () => Step4Handler("New York Power Authority (NYPA)") }
           >New York Power Authority (NYPA)</button>
         <button
-          className="stepButton2 w-[600px]"
+          className={`${formData.electricity_provider === "NYSEG: New York State Electric and Gas Corporation" ? "stepButton2Active" : "stepButton2"} w-[350px] md:w-[600px]`}
           onClick={ () => Step4Handler("NYSEG: New York State Electric and Gas Corporation") }
           >NYSEG: New York State Electric and Gas Corporation</button>
         <button
-          className="stepButton2 w-[600px]"
+          className={`${formData.electricity_provider === "Other" ? "stepButton2Active" : "stepButton2"} w-[350px] md:w-[600px]`}
           onClick={ () => Step4Handler("Other") }
           >Other</button>
         

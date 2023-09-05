@@ -24,7 +24,7 @@ const Step1 = ({ formData, handleChangeInput, handleNextStep, handleSubmitFormDa
           Are You A Homeowner?
         </h1>
         <button
-          className="stepButton1"
+          className={`${formData.is_owner === "yes" ? "stepButton1Active" : "stepButton1"} `}
           onClick={ () => step1Handler("yes") }
           >YES</button>
         <button
