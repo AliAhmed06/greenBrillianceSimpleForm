@@ -1,19 +1,23 @@
 const Step4 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) => {
   const Step4Handler = (val) => {
-    if(val == "ConEd, subsidiary of Consolidated Edison"){
-      handleChangeInput("electricity_provider", "ConEd, subsidiary of Consolidated Edison")      
+    if(val == "Shenandoah Valley Electric cooperative"){
+      handleChangeInput("electricity_provider", "Shenandoah Valley Electric cooperative")      
       handleNextStep()
     }
-    else if(val == "National Grid"){
-      handleChangeInput("electricity_provider", "National Grid")      
+    else if(val == "Dominion Energy"){
+      handleChangeInput("electricity_provider", "Dominion Energy")      
       handleNextStep()
     }
-    else if(val == "New York Power Authority (NYPA)"){
-      handleChangeInput("electricity_provider", "New York Power Authority (NYPA)")      
+    else if(val == "American Electric Power"){
+      handleChangeInput("electricity_provider", "American Electric Power")      
       handleNextStep()
     }
-    else if(val == "NYSEG: New York State Electric and Gas Corporation"){
-      handleChangeInput("electricity_provider", "NYSEG: New York State Electric and Gas Corporation")      
+    else if(val == "Mecklenburg Electric cooperative"){
+      handleChangeInput("electricity_provider", "Mecklenburg Electric cooperative")      
+      handleNextStep()
+    }
+    else if(val == "Southside Electric Cooperative"){
+      handleChangeInput("electricity_provider", "Southside Electric Cooperative")      
       handleNextStep()
     }
     else{
@@ -33,22 +37,26 @@ const Step4 = ({ formData, handleChangeInput, handleNextStep, handlePrevStep }) 
         </h1>
         <p className="text-lg mt-5 w-[400px] text-center text-white">Lets make sure your electric provider has a homeowner solar program.</p>      
         <button
-          className={`${formData.electricity_provider === "ConEd, subsidiary of Consolidated Edison" ? "stepButton2Active" : "stepButton2"} w-[300px] md:w-[600px]`}
+          className={`${formData.electricity_provider === "Shenandoah Valley Electric cooperative" ? "stepButton2Active" : "stepButton2"} w-[300px] md:w-[600px]`}
           // className="stepButton2 w-[350px] md:w-[600px]"
-          onClick={ () => Step4Handler("ConEd, subsidiary of Consolidated Edison") }
-          >ConEd, subsidiary of Consolidated Edison</button>
+          onClick={ () => Step4Handler("Shenandoah Valley Electric cooperative") }
+          >Shenandoah Valley Electric cooperative</button>
         <button
-          className={`${formData.electricity_provider === "National Grid" ? "stepButton2Active" : "stepButton2"} w-[300px] md:w-[600px]`}
-          onClick={ () => Step4Handler("National Grid") }
-          >National Grid</button>
+          className={`${formData.electricity_provider === "Dominion Energy" ? "stepButton2Active" : "stepButton2"} w-[300px] md:w-[600px]`}
+          onClick={ () => Step4Handler("Dominion Energy") }
+          >Dominion Energy</button>
         <button
-          className={`${formData.electricity_provider === "New York Power Authority (NYPA)" ? "stepButton2Active" : "stepButton2"} w-[300px] md:w-[600px]`}
-          onClick={ () => Step4Handler("New York Power Authority (NYPA)") }
-          >New York Power Authority (NYPA)</button>
+          className={`${formData.electricity_provider === "American Electric Power" ? "stepButton2Active" : "stepButton2"} w-[300px] md:w-[600px]`}
+          onClick={ () => Step4Handler("American Electric Power") }
+          >American Electric Power</button>
         <button
-          className={`${formData.electricity_provider === "NYSEG: New York State Electric and Gas Corporation" ? "stepButton2Active" : "stepButton2"} w-[300px] md:w-[600px]`}
-          onClick={ () => Step4Handler("NYSEG: New York State Electric and Gas Corporation") }
-          >NYSEG: New York State Electric and Gas Corporation</button>
+          className={`${formData.electricity_provider === "Mecklenburg Electric cooperative" ? "stepButton2Active" : "stepButton2"} w-[300px] md:w-[600px]`}
+          onClick={ () => Step4Handler("Mecklenburg Electric cooperative") }
+          >Mecklenburg Electric cooperative</button>
+        <button
+          className={`${formData.electricity_provider === "Southside Electric Cooperative" ? "stepButton2Active" : "stepButton2"} w-[300px] md:w-[600px]`}
+          onClick={ () => Step4Handler("Southside Electric Cooperative") }
+          >Southside Electric Cooperative</button>
         <button
           className={`${formData.electricity_provider === "Other" ? "stepButton2Active" : "stepButton2"} w-[300px] md:w-[600px]`}
           onClick={ () => Step4Handler("Other") }

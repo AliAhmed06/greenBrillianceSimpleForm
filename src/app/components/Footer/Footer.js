@@ -45,8 +45,8 @@ const Footer = () => {
                 <div className='bg-[#f8ba4d] h-[2px] w-[60px]'></div>
             </div>
             <div className='flex flex-col gap-3'>
-                <span>+92 300 0000000</span>
-                <span>admin@company.com</span>
+                <span>+1 757-559-1931</span>
+                <span>admin@solarenergypros.org</span>
                 <span>ABC Street London</span>
             </div>
         </div>
