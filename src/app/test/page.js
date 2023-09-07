@@ -3,7 +3,7 @@ import { useState } from 'react';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 
-const page = () => {
+const Page = () => {
   const [address, setAddress] = useState("");
   console.log("address = ", address.label);
   return (
@@ -24,4 +24,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
