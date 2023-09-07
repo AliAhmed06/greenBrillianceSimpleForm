@@ -1,32 +1,38 @@
-"use client"
-import axios from "axios";
-import Autocomplete from "react-google-autocomplete";
+"use client";
+import DataTable from "react-data-table-component";
 
-const ContactForm = () => {
-  const handler = async () => {
-    const data = {
-      "address": "some address here",
-      "credit_score": "GOOD 640 - 739",
-      "electricity_provider": "ConEd, subsidiary of Consolidated Edison",
-      "email": "test@gmail.com",
-      "first_name": "first name",
-      "type_of_home": "SINGLE FAMILY HOME",
-      "is_home_owner": 0,
-      "last_name": "last name",
-      "average_monthly_bill": "LESS THAN $100",
-      "phone": "123456789",
-      "shade": "NO SHADE",
-      "zip": "54000",
-      "solar_considering": ["yes","no"]
-    }
-    const response =  await axios.post("https://api.solarenergypros.org/api/solar_inquiries", data);
-    console.log("ali response is = ", response);
-  }
+const page = () => {
+  const columns = [
+    {
+      name: "Title",
+      selector: (row) => row.title,
+    },
+    {
+      name: "Year",
+      selector: (row) => row.year,
+    },
+  ];
+
+  const data = [
+    {
+      id: 1,
+      title: "Beetlejuice",
+      year: "1988",
+    },
+    {
+      id: 2,
+      title: "Ghostbusters",
+      year: "1984",
+    },
+  ];
+
   return (
-    <button onClick={handler}>
-      click
-    </button>
+    <div className="">
+      <div className="w-[80%] mx-auto">
+        <DataTable columns={columns} data={data} />
+      </div>
+    </div>
   );
 };
 
-export default ContactForm;
+export default page;

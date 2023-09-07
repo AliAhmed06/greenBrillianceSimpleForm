@@ -66,3 +66,25 @@
 .table th,td{
     @apply py-2 px-5 min-w-[200px]
  }
+
+
+ /* Privacy Page */
+ .privacyTable{
+    @apply border border-gray-300 overflow-auto
+}
+
+.privacyTable tr,th, td{
+    @apply border border-gray-300 
+}
+
+.privacyTable tr th{
+    @apply text-center
+}
+
+.privacyTable tr td{
+    @apply text-start
+}
+
+.privacyTable th,td{
+    @apply py-2 px-5 min-w-[200px]
+ }

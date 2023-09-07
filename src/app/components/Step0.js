@@ -33,6 +33,9 @@ const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
                 value={formData.zip}
                 onChange={(e) => handleChangeInput("zip", e.target.value) }                
             />
+            
+            <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c"></input>
+            
             { zipError !== "" && <p className="text-red-500 font-semibold">{zipError}</p> }
             <button
                 onClick={ () => Step0Handler() }
