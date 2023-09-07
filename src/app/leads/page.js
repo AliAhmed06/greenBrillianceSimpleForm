@@ -3,19 +3,19 @@ import Link from "next/link";
 import React from "react";
 
 const getData = async () => {
-  let response = await axios.get(
-    "https://api.solarenergypros.org/api/solar_inquiries"
+  let response = await fetch(
+    "http://api.solarenergypros.org/api/solar_inquiries"
   );
   // let response = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood");
-  // response = await response.json();
+  response = await response.json();
   // response = response.meals;
 
-  return response.data.solar_inquiries;
+  return response.solar_inquiries;
 };
 
 const page = async () => {
   const data = await getData();
-//   console.log(data);
+  console.log(data);
   return (
     <div className="min-h-[500px] w-full flex items-center justify-center text-white py-10 overflow-hidden">
       <div className="w-[80%] overflow-auto border border-white">
