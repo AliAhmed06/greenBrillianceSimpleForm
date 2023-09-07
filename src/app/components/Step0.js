@@ -10,9 +10,6 @@ const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
         if(formData.zip === ""){
             setZipError("Zip is required")
         }   
-        else if(formData.zip.length !== 5){
-            setZipError("Zip format is not correct")
-        }     
         else{
             handleNextStep(); 
         }
@@ -30,7 +27,7 @@ const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
             <h3 className='text-4xl text-white font-bold mt-5 leading-[50px]'>DO YOU <br /> QUALIFY?</h3>
             <p className='text-lg  mt-5 text-white'>Enter your zip code to see how much you could save</p>
             <input 
-                type="number" 
+                type="text" 
                 placeholder='Your Zip Code *' 
                 className='stepField w-full lg:w-[70%]'
                 value={formData.zip}
