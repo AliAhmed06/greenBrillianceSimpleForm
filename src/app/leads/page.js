@@ -14,7 +14,7 @@ const getData = async () => {
 
 const page = async () => {
   const data = await getData();
-  console.log(data);
+  // console.log(data);
   return (
     <div className="min-h-[500px] w-full flex items-center justify-center text-white py-10 overflow-hidden">
       <div className="w-[80%] overflow-auto border border-white">

@@ -18,11 +18,15 @@
     "next": "13.4.19",
     "postcss": "8.4.28",
     "react": "18.2.0",
+    "react-cool-onclickoutside": "^1.7.0",
     "react-data-table-component": "^7.5.4",
     "react-dom": "18.2.0",
     "react-google-autocomplete": "^2.7.3",
+    "react-google-places-autocomplete": "^4.0.1",
     "styled-components": "^6.0.7",
     "tailwindcss": "3.3.3",
+    "use-google-places-autocomplete": "^2.0.0",
+    "use-places-autocomplete": "^4.0.1",
     "zustand": "^4.4.1"
   }
 }
