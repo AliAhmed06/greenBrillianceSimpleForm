@@ -1,27 +1,14 @@
-"use client"
-import { useState } from 'react';
-import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+import React from 'react';
+import PhoneNumberInput from './PhoneNumberInput';
 
 
-const Page = () => {
-  const [address, setAddress] = useState("");
-  console.log("address = ", address.label);
+const YourPage = () => {
   return (
     <div>
-      <GooglePlacesAutocomplete
-        apiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY}
-        autocompletionRequest={{        
-          componentRestrictions: {
-            country: ['us', 'ca', 'uy'],
-          }
-        }}
-        selectProps={{
-          address,
-          onChange: setAddress,
-        }}      
-      />
+      <h1>Phone Number Input Example</h1>
+      <PhoneNumberInput />
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default YourPage;
