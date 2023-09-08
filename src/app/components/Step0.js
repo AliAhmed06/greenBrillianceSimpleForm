@@ -16,7 +16,7 @@ const Step0 = ({ formData, handleChangeInput, handleNextStep }) => {
     }
   
     return (
-    <div className='flex flex-col-reverse lg:flex-row items-center justify-center'>
+    <div className='flex flex-col  lg:flex-row items-center justify-center mt-10'>
         <div className='lg:w-[50%] md:px-[50px]   '>
             <div className='bg-[#ffd75d] lg:w-[450px] py-1 px-7 rounded-full text-[#235c94] flex text-lg items-center gap-3 '>
                 <div className="h-[40px] w-[40px] ">
