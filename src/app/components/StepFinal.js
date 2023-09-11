@@ -1,6 +1,6 @@
 const StepFinal = () => {
   return (
-    <div className="text-white mt-10">
+    <div className="text-white my-20 px-10">
       <h3 className="text-6xl text-white font-bold text-center">Thank you!</h3>
       <p className="text-center mt-5 text-lg font-semibold">Here is what happens next!</p>
 
@@ -23,9 +23,9 @@ const StepFinal = () => {
       
       </div>
 
-      <div className=" mt-10">
+      {/* <div className=" mt-10">
         <a href="/" className="text-xl font-bold underline ">Go Back</a>
-      </div>
+      </div> */}
     </div>
   );
 };

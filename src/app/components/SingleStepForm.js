@@ -5,7 +5,7 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { toast } from "react-toastify";
 
 
-const SingleStepForm = () => {
+const SingleStepForm = ({setShowForm}) => {
   const [error, setError] = useState("");
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -23,6 +23,7 @@ const SingleStepForm = () => {
 
   const formHandler = async (e) => {
     e.preventDefault();
+
     
     let isOwnerVal = document.querySelector(
       "input[name='owner']:checked"
@@ -77,16 +78,21 @@ const SingleStepForm = () => {
     setLoading(true);
     try {
       const response =  await axios.post("https://api.solarenergypros.org/api/solar_inquiries", data);
-      console.log("ali response is = ", response);
-      toast.success("Your Message has been received!", {position: toast.POSITION.TOP_RIGHT});            
+      // console.log("ali response is = ", response);
+      // toast.success("Your Message has been received!", {position: toast.POSITION.TOP_RIGHT});            
+      setLoading(false);
+      document.documentElement.style.scrollBehavior = "smooth";
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      setShowForm(false);
+  
     } catch (error) {
       toast.error("Something went wrong: " + error , {position: toast.POSITION.TOP_RIGHT});            
     }
-    setLoading(false);
     
-    setTimeout(function () {
-      location.reload();
-    }, 3000);
+    // setTimeout(function () {
+    //   location.reload();
+    // }, 3000);
     
   };
 

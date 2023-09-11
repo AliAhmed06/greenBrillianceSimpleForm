@@ -2,28 +2,31 @@
 import React, { useState } from 'react';
 import SimpleMultiStepForm from './components/SimpleMultiStepForm';
 import SingleStepForm from './components/SingleStepForm';
+import StepFinal from './components/StepFinal';
 
 
 const Page = () => {
   const [zip, setZip] = useState("");
-  const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState(true);
+  
+
   
   // console.log(`zip = ${zip} and zip length = ${zip.length} and show form = ${showForm}`)
-  const showFormHandler = () => {
-    if(zip.length === 5){
-      setShowForm(true);
-    }
-    else{
-      setShowForm(false);
-    }
-  }
+  // const showFormHandler = () => {
+  //   if(zip.length === 5){
+  //     setShowForm(true);
+  //   }
+  //   else{
+  //     setShowForm(false);
+  //   }
+  // }
 
   return (
     <div className='min-h-screen font-Sagoe'>      
       {/* <SimpleMultiStepForm showStepNumber={true} /> */}
 
-      <SingleStepForm />
-
+      { showForm === true ? <SingleStepForm setShowForm={setShowForm} /> : <StepFinal /> } 
+      
 
       <div className='mt-10'>
         
