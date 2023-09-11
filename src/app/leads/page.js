@@ -26,30 +26,22 @@ const page = async () => {
               <th>phone</th>
               <th>zip</th>
               <th>Home Owner</th>
-              <th>Home Type</th>
-              <th>Averagre Monthly Bill</th>
-              <th>Electricity Provider</th>
-              <th>Credit Score</th>
-              <th>Shade</th>
               <th>Address</th>
+              <th>Message</th>
             </tr>
           </thead>
           <tbody>
             {data?.map((item) => (
               <tr key={item.id}>
                 <td>
-                  {item.first_name} {item.last_name}
+                  {item.full_name}
                 </td>
                 <td>{item.email}</td>
                 <td>{item.phone}</td>
                 <td>{item.zip}</td>
                 <td>{item.is_home_owner}</td>
-                <td>{item.type_of_home}</td>
-                <td>{item.average_monthly_bill}</td>
-                <td>{item.electricity_provider}</td>
-                <td>{item.credit_score}</td>
-                <td>{item.shade}</td>
                 <td>{item.address}</td>
+                <td>{item.message}</td>                
               </tr>
             ))}
           </tbody>

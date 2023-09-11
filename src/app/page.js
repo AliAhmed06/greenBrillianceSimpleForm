@@ -1,14 +1,13 @@
 "use client";
 import React, { useState } from 'react';
 import SimpleMultiStepForm from './components/SimpleMultiStepForm';
-
-
-
+import SingleStepForm from './components/SingleStepForm';
 
 
 const Page = () => {
   const [zip, setZip] = useState("");
   const [showForm, setShowForm] = useState(false);
+  
   // console.log(`zip = ${zip} and zip length = ${zip.length} and show form = ${showForm}`)
   const showFormHandler = () => {
     if(zip.length === 5){
@@ -21,7 +20,11 @@ const Page = () => {
 
   return (
     <div className='min-h-screen font-Sagoe'>      
-      <SimpleMultiStepForm showStepNumber={true} />
+      {/* <SimpleMultiStepForm showStepNumber={true} /> */}
+
+      <SingleStepForm />
+
+
       <div className='mt-10'>
         
         <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl'>
@@ -72,12 +75,11 @@ const Page = () => {
           </div>
         </div>
 
-        <div className='flex flex-col items-center justify-center mt-10 p-10'>
+        {/* <div className='flex flex-col items-center justify-center mt-10 p-10'>
           <img src="/images/logo8.png" alt="" className='h-[120px]' />
           <p className='text-4xl text-white font-Teko font-bold mt-5 text-center'>4 SIMPLE STEPS TO RECEIVE YOUR <br /> FREE SOLAR CONSULTATION</p>
         </div>
 
-        {/* Portions stars from here */}
         <div className='w-[80%] max-w-[1100px] mx-auto'>
           <div className='bg-white  py-10 px-10 rounded-xl mt-10 flex gap-5 lg:gap-16 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.4)]'>
             <span className=' font-bold text-3xl text-[#f8ba4d]'>1</span>
@@ -113,7 +115,7 @@ const Page = () => {
               <p className='mt-5 text-lg'>This insight helps us estimate the sunlight exposure your roof gets daily, ensuring we connect you with the most suitable solar company.</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className='flex items-center justify-center mt-5 mb-20'>          
           <a href="/" className='stepButton0 text-center font-Teko'>SEE IF YOU QUALIFY</a>
