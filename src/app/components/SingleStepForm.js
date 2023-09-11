@@ -259,9 +259,6 @@ const SingleStepForm = () => {
             </div>
 
             
-            <div className="relative">
-              <span className="absolute z-10 top-[22px] left-[40px] text-gray-400 text-lg">Address*</span>
-            </div>
             <p className="text-[#295795] text-xl">Address*</p>
             <GooglePlacesAutocomplete              
               apiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY}
