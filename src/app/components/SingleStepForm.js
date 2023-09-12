@@ -29,45 +29,45 @@ const SingleStepForm = ({setShowForm}) => {
       "input[name='owner']:checked"
     )?.value;
 
-    if(name === "" || phoneNumber === "" || email === "" || isOwnerVal === undefined || zip === "" || message === "" || address === undefined || address === ""){
-      setError("All fields are required");
-      return;
-    }
-    else{
-      setError("");      
-    }
+    // if(name === "" || phoneNumber === "" || email === "" || isOwnerVal === undefined || zip === "" || message === "" || address === undefined || address === ""){
+    //   setError("All fields are required");
+    //   return;
+    // }
+    // else{
+    //   setError("");      
+    // }
 
-    console.log("step2");
-    console.log("is valid = ", isValid) ;
-    if(isValid === false){
-      setError("Phone number is not correct");
-      return;
-    }
-    else{
-      setError("");
-    }
+    // console.log("step2");
+    // console.log("is valid = ", isValid) ;
+    // if(isValid === false){
+    //   setError("Phone number is not correct");
+    //   return;
+    // }
+    // else{
+    //   setError("");
+    // }
 
-    console.log("step3");
-    if(!email.match(validEmailRegex)){
-      setError("Email is not correct")
-      return;
-    }
-    else{        
-      setError("");
-    }
+    // console.log("step3");
+    // if(!email.match(validEmailRegex)){
+    //   setError("Email is not correct")
+    //   return;
+    // }
+    // else{        
+    //   setError("");
+    // }
 
-    if(isOwnerVal === "no"){
-      setError("You must be a house owner to avail this service")
-      return;
-    }
-    else{        
-      setError("");
-    }
+    // if(isOwnerVal === "no"){
+    //   setError("You must be a house owner to avail this service")
+    //   return;
+    // }
+    // else{        
+    //   setError("");
+    // }
 
     
     const data = {
       "zip": zip,
-      "is_home_owner": 1,
+      "is_home_owner": isOwnerVal === "yes" ? 1 : 0,
       "address": address.label,
       "email": email,
       "full_name": name,
@@ -112,9 +112,9 @@ const SingleStepForm = ({setShowForm}) => {
   };
 
   const formatPhoneNumber = (phoneNumber) => {
-    if (phoneNumber.length === 0) {
-      return "";
-    }
+    // if (phoneNumber.length === 0) {
+    //   return "";
+    // }
 
     let formattedDisplay = "";
 
