@@ -179,10 +179,10 @@ const SingleStepForm = ({setShowForm}) => {
       <div className="z-20 w-full h-full absolute ">
         <div className="md:w-[80%] h-full bg-[#eff4f7] p-5 bg-opacity-90 flex flex-col items-center justify-center mx-auto">
           <h2 className="text-[#295795] text-5xl font-Teko ">
-            End of Summer Sale - Save $500
+            Invest Today, Save Tomorrow
           </h2>
           <p className="text-[#F4BC33] text-3xl text-center">
-            Schedule your appointment this weekend and save $500. Call today!
+            Exclusive Fall Solar Offers
           </p>
           <form className="flex flex-col mt-8 md:w-[450px] gap-3">
             {error !== "" && (
