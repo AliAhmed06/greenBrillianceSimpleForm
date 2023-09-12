@@ -184,7 +184,7 @@ const SingleStepForm = ({setShowForm}) => {
           <p className="text-[#F4BC33] text-3xl text-center">
             Exclusive Fall Solar Offers
           </p>
-          <form className="flex flex-col mt-8 md:w-[450px] gap-3">
+          <form className="flex flex-col mt-8 w-[280px] md:w-[450px] gap-3">
             {error !== "" && (
               <p className="text-red-500">{error}</p>
             )}
