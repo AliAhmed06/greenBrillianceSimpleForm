@@ -3,10 +3,10 @@ import axios from "axios";
 import Link from "next/link";
 import React from "react";
 
-const getData = async () => {
-  // const response =  await axios.post(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, data);
-  let response = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, { cache: 'no-store' });
-  // let response = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood");
+const getData = async () => {  
+  // let response = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, { cache: 'no-store' });
+  let response = await fetch("http://api.solarenergypros.org/api/solar_inquiries", { cache: 'no-store' });
+
   response = await response.json();
   // response = response.meals;
 
