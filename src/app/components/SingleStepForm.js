@@ -4,7 +4,6 @@ import React, { useRef, useState } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { toast } from "react-toastify";
 
-
 const SingleStepForm = ({setShowForm}) => {
   const [error, setError] = useState("");
   const [name, setName] = useState("");
@@ -77,7 +76,8 @@ const SingleStepForm = ({setShowForm}) => {
 
     setLoading(true);
     try {
-      const response =  await axios.post("https://api.solarenergypros.org/api/solar_inquiries", data);
+      const response =  await axios.post(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, data);
+      console.log(response);
       // console.log("ali response is = ", response);
       // toast.success("Your Message has been received!", {position: toast.POSITION.TOP_RIGHT});            
       setLoading(false);

@@ -13,7 +13,7 @@ const PrivacyPolicyPage = () => {
         <h5 className="font-semibold pt-3">Effective Date: February 2, 2022</h5>
         <h5 className="font-semibold">Last Reviewed on: January 3, 2023</h5>
         <p>
-          We at solarenergypros.org DBA of Esolarus LLC, understand that you
+          We at greenbrilliance.org DBA of Esolarus LLC, understand that you
           value your privacy and we strive to respect that privacy when you are
           using our services. This Privacy Policy describes what information we
           gather from you, how we use that information, and what we do to
@@ -260,7 +260,7 @@ const PrivacyPolicyPage = () => {
           your PII, you should not submit PII into the Site. The very nature of
           some of the services the Site offers requires your PII. Therefore, if
           you do not submit PII you may not be able to use the associated
-          services. You may also email admin@solarenergypros.org to request
+          services. You may also email admin@greenbrilliance.org to request
           access or changes to your PII; however, you will not be permitted to
           examine the PII of any other person or entity and may be required to
           provide us with PII to verify your identity prior to accessing any
@@ -274,7 +274,7 @@ const PrivacyPolicyPage = () => {
         </h5>
         <p>
           You may opt-out of receiving email marketing communications from us by
-          sending an email to admin@solarenergypros.org or by following the
+          sending an email to admin@greenbrilliance.org or by following the
           opt-out link in the emails you receive. Upon your opt-out, please
           allow up to 10 business days for the opt-out to go into effect. Please
           note that you may not be able to opt-out of transactional
@@ -403,14 +403,14 @@ const PrivacyPolicyPage = () => {
           provided us with PII, or that we have inadvertently collected such
           information, we will promptly delete it. If you believe that we have
           been provided with the PII of a child under the age of 13, please
-          notify us immediately at admin@solarenergypros.org
+          notify us immediately at admin@greenbrilliance.org
         </p>
         <h5 className="font-semibold">Your California Privacy Rights</h5>
         <p>
           Under California law, residents of California may request certain
           information about our disclosure of PII during the prior calendar year
           to third parties for marketing purposes. To request this information,
-          please contact us at admin@solarenergypros.org
+          please contact us at admin@greenbrilliance.org
         </p>
         <h5 className="font-semibold">
           Privacy Notice for California Residents
@@ -807,7 +807,7 @@ const PrivacyPolicyPage = () => {
         <p>
           To exercise the access, data portability, and deletion rights
           described above, please submit a verifiable consumer request to us by
-          sending us an email to admin@solarenergypros.org. Only you, or a
+          sending us an email to admin@greenbrilliance.org. Only you, or a
           person registered with the California Secretary of State that you
           authorize to act on your behalf, may make a verifiable consumer
           request related to your personal information. You may also make a
@@ -914,7 +914,7 @@ const PrivacyPolicyPage = () => {
           permits users of our Website that are California residents to request
           certain information regarding our disclosure of personal information
           to third parties for their direct marketing purposes. To make such a
-          request, please send us an email to admin@solarenergypros.org or write
+          request, please send us an email to admin@greenbrilliance.org or write
           us at our address listed on our webpage.
         </p>
 
@@ -938,7 +938,7 @@ const PrivacyPolicyPage = () => {
         <ul className="list-disc ml-[20px]">
           <li>
             By emailing at{" "}
-            <span className="text-blue-900">admin@solarenergypros.org</span>
+            <span className="text-blue-900">admin@greenbrilliance.org</span>
           </li>
           <li>By mailing - 21110 Brookside ln, Sterling , VA, 20165</li>
           <li>Write us at our address listed on our webpage.</li>

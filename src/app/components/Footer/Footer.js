@@ -9,11 +9,11 @@ const Footer = () => {
                 <h2 className='text-[#153456] font-Teko'>About Us</h2>
                 <div className='bg-[#f8ba4d] h-[2px] w-[60px]'></div>
             </div>
-            <p>Solar Energy Pros exists to serve homeowners who are looking to reduce the cost of powering their homes, but are unsure where to start their research. We have done the hard work for you by partnering with the top solar companies in your area. Then by answering just a few questions, we will match you with the solar companies that are the best fit for you. We give you the control to make smart, informed decisions that will make going solar a gratifying experience.</p>
+            <p>greenbrilliance exists to serve homeowners who are looking to reduce the cost of powering their homes, but are unsure where to start their research. We have done the hard work for you by partnering with the top solar companies in your area. Then by answering just a few questions, we will match you with the solar companies that are the best fit for you. We give you the control to make smart, informed decisions that will make going solar a gratifying experience.</p>
             <div className='flex gap-3 mt-5'>
-                <Link href={"https://www.facebook.com/solarenergyprova"} target='_blank'><img src="/images/facebook.png" alt="" className='h-[25px] w-[25px] object-contain' /></Link>
+                <Link href={"https://www.facebook.com/greenbrilliance"} target='_blank'><img src="/images/facebook.png" alt="" className='h-[25px] w-[25px] object-contain' /></Link>
                 {/* <Link href={"#"}><img src="/images/twitter.png" alt="" className='h-[25px] w-[25px] object-contain' /></Link> */}
-                <Link href={"https://www.instagram.com/solarenergyprosva"} target='_blank'><img src="/images/instagram.png" alt="" className='h-[25px] w-[25px] object-contain' /></Link>
+                <Link href={"https://www.instagram.com/greenbrilliance"} target='_blank'><img src="/images/instagram.png" alt="" className='h-[25px] w-[25px] object-contain' /></Link>
                 {/* <Link href={"#"}><img src="/images/youtube.png" alt="" className='h-[25px] w-[25px] object-contain' /></Link> */}
             </div>
         </div>
@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
             <div className='flex flex-col gap-3'>
                 <span>+1 757-559-1931</span>
-                <span>admin@solarenergypros.org</span>
+                <span>admin@greenbrilliance.org</span>
                 <span>21110 Brookside ln, Sterling , VA, 20165</span>
             </div>
         </div>
