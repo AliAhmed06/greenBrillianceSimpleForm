@@ -4,8 +4,8 @@ import Link from "next/link";
 import React from "react";
 
 const getData = async () => {  
-  // let response = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, { cache: 'no-store' });
-  let response = await fetch("http://api.solarenergypros.org/api/solar_inquiries", { cache: 'no-store' });
+  let response = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, { cache: 'no-store' });
+  // let response = await fetch("http://api.solarenergypros.org/api/solar_inquiries", { cache: 'no-store' });
 
   response = await response.json();
   // response = response.meals;
