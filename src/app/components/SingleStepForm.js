@@ -81,11 +81,12 @@ const SingleStepForm = ({setShowForm}) => {
                 'Content-type': 'application/json',
             },
             body: JSON.stringify( data ),
-        })
+      })
+
       // const response =  await axios.post("https://api.solarenergypros.org/api/solar_inquiries", data);
       // const response =  await axios.post(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, data);
       // const response =  await axios.post(`${process.env.DOMAIN_NAME}/api/simpleForm`, data);
-      console.log(response);
+      // console.log(response);
       // console.log("ali response is = ", response);
       // toast.success("Your Message has been received!", {position: toast.POSITION.TOP_RIGHT});            
       setLoading(false);

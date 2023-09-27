@@ -7,8 +7,9 @@ const getData = async () => {
   // let response = await fetch("http://api.solarenergypros.org/api/solar_inquiries", { cache: 'no-store' });
   let response = await fetch(`${process.env.DOMAIN_NAME}/api/simpleForm`, { cache: 'no-store' });
   // let response = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, { cache: 'no-store' });
-
-  response = await response.json();
+  // console.log(response);
+  // console.log(response.Headers['content-type'])
+  // response = await response.json();
   // response = response.meals;
 
   return response.formData;

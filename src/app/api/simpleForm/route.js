@@ -25,6 +25,11 @@ export async function GET(NextRequest){
 
 export async function POST(NextRequest){
     try {
+        // console.log(await NextRequest);
+        // return NextResponse.json({
+        //     message: "json is not parsed yet",
+        //     success: false,            
+        // });
         const reqBody = await NextRequest.json();
         const {zip, is_home_owner, address, email, full_name, phone, message} = reqBody;
         const newForm = new SimpleForm({
