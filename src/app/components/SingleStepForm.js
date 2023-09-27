@@ -73,10 +73,16 @@ const SingleStepForm = ({setShowForm}) => {
       "phone": phoneNumber,
       "message": message,
     }
-
     setLoading(true);
     try {
-      const response =  await axios.post("https://api.solarenergypros.org/api/solar_inquiries", data);
+      const response =  await fetch(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify( data ),
+        })
+      // const response =  await axios.post("https://api.solarenergypros.org/api/solar_inquiries", data);
       // const response =  await axios.post(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, data);
       // const response =  await axios.post(`${process.env.DOMAIN_NAME}/api/simpleForm`, data);
       console.log(response);

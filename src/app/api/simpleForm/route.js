@@ -27,7 +27,6 @@ export async function POST(NextRequest){
     try {
         const reqBody = await NextRequest.json();
         const {zip, is_home_owner, address, email, full_name, phone, message} = reqBody;
-        
         const newForm = new SimpleForm({
             zip,
             is_home_owner,
