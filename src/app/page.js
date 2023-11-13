@@ -1,16 +1,13 @@
 "use client";
-import React, { useState } from 'react';
-import SimpleMultiStepForm from './components/SimpleMultiStepForm';
-import SingleStepForm from './components/SingleStepForm';
-import StepFinal from './components/StepFinal';
-
+import React, { useState } from "react";
+import SimpleMultiStepForm from "./components/SimpleMultiStepForm";
+import SingleStepForm from "./components/SingleStepForm";
+import StepFinal from "./components/StepFinal";
 
 const Page = () => {
   const [zip, setZip] = useState("");
   const [showForm, setShowForm] = useState(true);
-  
 
-  
   // console.log(`zip = ${zip} and zip length = ${zip.length} and show form = ${showForm}`)
   // const showFormHandler = () => {
   //   if(zip.length === 5){
@@ -22,58 +19,103 @@ const Page = () => {
   // }
 
   return (
-    <div className='min-h-screen font-Sagoe'>      
+    <div className="min-h-screen font-Sagoe">
       {/* <SimpleMultiStepForm showStepNumber={true} /> */}
 
-      { showForm === true ? <SingleStepForm setShowForm={setShowForm} /> : <StepFinal /> } 
-      
+      {showForm === true ? (
+        <SingleStepForm setShowForm={setShowForm} />
+      ) : (
+        <StepFinal />
+      )}
 
-      <div className='mt-10'>
-        
-        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl'>
-          <h3 className='font-bold text-4xl text-[#235c94] text-center lg:text-start font-Teko '>HOW MUCH DOES SOLAR COST?</h3>
-          <div className='flex flex-col-reverse lg:flex-row mt-5 '>
-            <div className='lg:w-[80%]'>
-              <p className='text-lg'>Many solar companies might use enticing words like <span className='font-bold'>Free</span> to grab your attention. However, the reality is that solar is not free. There is a cost to going solar. But, for those who are a good fit, the advantages of solar energy can surpass its costs, straightforwardly. Enhancing the appeal of solar are the numerous incentives from the Federal Government and several states, including tax breaks and rebates, aiming to make your switch economically beneficial. Remember, nothing in life is truly free.</p>
+      <div className="mt-10">
+        <div className="bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl">
+          <h3 className="font-bold text-4xl text-[#235c94] text-center lg:text-start font-Teko ">
+            HOW MUCH DOES SOLAR COST?
+          </h3>
+          <div className="flex flex-col-reverse lg:flex-row mt-5 ">
+            <div className="lg:w-[80%]">
+              <p className="text-lg">
+                Many solar companies might use enticing words like{" "}
+                <span className="font-bold">Free</span> to grab your attention.
+                However, the reality is that solar is not free. There is a cost
+                to going solar. But, for those who are a good fit, the
+                advantages of solar energy can surpass its costs,
+                straightforwardly. Enhancing the appeal of solar are the
+                numerous incentives from the Federal Government and several
+                states, including tax breaks and rebates, aiming to make your
+                switch economically beneficial. Remember, nothing in life is
+                truly free.
+              </p>
             </div>
-            <div className='lg:w-[20%] flex items-center justify-center'>
-              <img src="/images/logo4.png" alt="" className='h-[100px]' />
+            <div className="lg:w-[20%] flex items-center justify-center">
+              <img src="/images/logo4.png" alt="" className="h-[100px]" />
             </div>
           </div>
         </div>
 
-        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10'>
-          <h3 className='font-bold text-4xl text-[#235c94] text-center lg:text-start font-Teko'>IS YOUR ROOF READY FOR PANELS?</h3>
-          <div className='flex flex-col-reverse lg:flex-row mt-5 '>
-            <div className='lg:w-[80%]'>
-              <p className='text-lg'>Think of solar panels as a long-haul commitment. Given this long-term perspective, it is crucial to ensure your roof is relatively new and robust. It would not be wise to invest in solar panels today and then need to take them down in a couple of years for roof repairs or replacement. If your roof is nearing or past the 15-year mark, it might be wise to consider a roof replacement beforehand. Fortunately, many leading solar firms offer both roof replacement and expert solar installation services.</p>
+        <div className="bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10">
+          <h3 className="font-bold text-4xl text-[#235c94] text-center lg:text-start font-Teko">
+            IS YOUR ROOF READY FOR PANELS?
+          </h3>
+          <div className="flex flex-col-reverse lg:flex-row mt-5 ">
+            <div className="lg:w-[80%]">
+              <p className="text-lg">
+                Think of solar panels as a long-haul commitment. Given this
+                long-term perspective, it is crucial to ensure your roof is
+                relatively new and robust. It would not be wise to invest in
+                solar panels today and then need to take them down in a couple
+                of years for roof repairs or replacement. If your roof is
+                nearing or past the 15-year mark, it might be wise to consider a
+                roof replacement beforehand. Fortunately, many leading solar
+                firms offer both roof replacement and expert solar installation
+                services.
+              </p>
             </div>
-            <div className='lg:w-[20%] flex items-center justify-center'>
-              <img src="/images/logo5.png" alt="" className='h-[100px]' />
+            <div className="lg:w-[20%] flex items-center justify-center">
+              <img src="/images/logo5.png" alt="" className="h-[100px]" />
             </div>
           </div>
         </div>
 
-        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10'>
-          <h3 className='font-bold text-4xl text-[#235c94] text-center lg:text-start font-Teko'>WHAT IS THE STATE OF YOUR CREDIT?</h3>
-          <div className='flex flex-col-reverse lg:flex-row mt-5 '>
-            <div className='lg:w-[80%]'>
-              <p className='text-lg'>As reiterated, solar does not come without a price. A typical rooftop solar setup may range from $10,000 to $30,000. This is why a majority of homeowners opt for financing over a span of 10 to 20 years. To benefit from the best financing rates, you should have a solid credit score. Typically, a score of 640 or above is recommended.</p>
+        <div className="bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10">
+          <h3 className="font-bold text-4xl text-[#235c94] text-center lg:text-start font-Teko">
+            WHAT IS THE STATE OF YOUR CREDIT?
+          </h3>
+          <div className="flex flex-col-reverse lg:flex-row mt-5 ">
+            <div className="lg:w-[80%]">
+              <p className="text-lg">
+                As reiterated, solar does not come without a price. A typical
+                rooftop solar setup may range from $10,000 to $30,000. This is
+                why a majority of homeowners opt for financing over a span of 10
+                to 20 years. To benefit from the best financing rates, you
+                should have a solid credit score. Typically, a score of 640 or
+                above is recommended.
+              </p>
             </div>
-            <div className='lg:w-[20%] flex items-center justify-center'>
-              <img src="/images/logo6.png" alt="" className='h-[100px]' />
+            <div className="lg:w-[20%] flex items-center justify-center">
+              <img src="/images/logo6.png" alt="" className="h-[100px]" />
             </div>
           </div>
         </div>
 
-        <div className='bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10'>
-          <h3 className='font-bold text-4xl text-[#235c94] text-center lg:text-start font-Teko'>FEDERAL TAX CREDITS & MORE BENEFITS</h3>
-          <div className='flex flex-col-reverse lg:flex-row mt-5 '>
-            <div className='lg:w-[80%]'>
-              <p className='text-lg'>The Federal Government is undoubtedly encouraging the shift to cleaner energy sources. To push this transition, they are offering a 30% TAX CREDIT. Think of this as a 30% price cut on your solar installation. Plus, depending on your locality, there might be other state or local incentives at your disposal. We will delve deeper into these when we discuss further!</p>
+        <div className="bg-white w-[80%] max-w-[1100px] mx-auto py-10 px-10 rounded-xl mt-10">
+          <h3 className="font-bold text-4xl text-[#235c94] text-center lg:text-start font-Teko">
+            FEDERAL TAX CREDITS & MORE BENEFITS
+          </h3>
+          <div className="flex flex-col-reverse lg:flex-row mt-5 ">
+            <div className="lg:w-[80%]">
+              <p className="text-lg">
+                The Federal Government is undoubtedly encouraging the shift to
+                cleaner energy sources. To push this transition, they are
+                offering a 30% TAX CREDIT. Think of this as a 30% price cut on
+                your solar installation. Plus, depending on your locality, there
+                might be other state or local incentives at your disposal. We
+                will delve deeper into these when we discuss further!
+              </p>
             </div>
-            <div className='lg:w-[20%] flex items-center justify-center'>
-              <img src="/images/logo7.png" alt="" className='h-[100px]' />
+            <div className="lg:w-[20%] flex items-center justify-center">
+              <img src="/images/logo7.png" alt="" className="h-[100px]" />
             </div>
           </div>
         </div>
@@ -120,8 +162,10 @@ const Page = () => {
           </div>
         </div> */}
 
-        <div className='flex items-center justify-center mt-5 mb-20'>          
-          <a href="/" className='stepButton0 text-center font-Teko'>SEE IF YOU QUALIFY</a>
+        <div className="flex items-center justify-center mt-5 mb-20">
+          <a href="/" className="stepButton0 text-center font-Teko">
+            SEE IF YOU QUALIFY
+          </a>
         </div>
       </div>
     </div>

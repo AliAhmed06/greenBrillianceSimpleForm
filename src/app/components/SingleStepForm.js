@@ -153,6 +153,7 @@ const SingleStepForm = ({ setShowForm }) => {
       const selectionStart = inputRef.current.selectionStart;
       const selectionEnd = inputRef.current.selectionEnd;
 
+      // testing
       // If the cursor is at the beginning of a group (e.g., before '(', ')', or '-'),
       // move the cursor left by one position
       if (selectionStart === selectionEnd) {
