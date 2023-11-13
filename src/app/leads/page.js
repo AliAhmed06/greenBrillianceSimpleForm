@@ -29,12 +29,9 @@ const Page = () => {
 
   useEffect(() => {
     const getData = async () => {
-      let response = await fetch(
-        `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`,
-        {
-          cache: "no-store",
-        }
-      );
+      let response = await fetch(`/api/simpleForm`, {
+        cache: "no-store",
+      });
       // let response = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, { cache: 'no-store' });
       const contentType = response.headers.get("content-type");
       response = await response.json();
