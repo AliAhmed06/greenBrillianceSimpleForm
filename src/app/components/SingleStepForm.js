@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { toast } from "react-toastify";
 
-const SingleStepForm = ({setShowForm}) => {
+const SingleStepForm = ({ setShowForm }) => {
   const [error, setError] = useState("");
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -18,12 +18,12 @@ const SingleStepForm = ({setShowForm}) => {
 
   const inputRef = useRef(null);
 
-  const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const validEmailRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   const formHandler = async (e) => {
     e.preventDefault();
 
-    
     let isOwnerVal = document.querySelector(
       "input[name='owner']:checked"
     )?.value;
@@ -33,7 +33,7 @@ const SingleStepForm = ({setShowForm}) => {
     //   return;
     // }
     // else{
-    //   setError("");      
+    //   setError("");
     // }
 
     // console.log("step2");
@@ -51,7 +51,7 @@ const SingleStepForm = ({setShowForm}) => {
     //   setError("Email is not correct")
     //   return;
     // }
-    // else{        
+    // else{
     //   setError("");
     // }
 
@@ -59,50 +59,49 @@ const SingleStepForm = ({setShowForm}) => {
     //   setError("You must be a house owner to avail this service")
     //   return;
     // }
-    // else{        
+    // else{
     //   setError("");
     // }
 
-    
     const data = {
-      "zip": zip,
-      "is_home_owner": isOwnerVal === "yes" ? 1 : 0,
-      "address": address.label,
-      "email": email,
-      "full_name": name,
-      "phone": phoneNumber,
-      "message": message,
-    }
+      zip: zip,
+      is_home_owner: isOwnerVal === "yes" ? 1 : 0,
+      address: address.label,
+      email: email,
+      full_name: name,
+      phone: phoneNumber,
+      message: message,
+    };
     setLoading(true);
     try {
-      const response =  await fetch(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json',
-            },
-            body: JSON.stringify( data ),
-      })
+      const response = await fetch(`/api/simpleForm`, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
       // const response =  await axios.post("https://api.solarenergypros.org/api/solar_inquiries", data);
       // const response =  await axios.post(`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/api/simpleForm`, data);
       // const response =  await axios.post(`${process.env.DOMAIN_NAME}/api/simpleForm`, data);
       // console.log(response);
       // console.log("ali response is = ", response);
-      // toast.success("Your Message has been received!", {position: toast.POSITION.TOP_RIGHT});            
+      // toast.success("Your Message has been received!", {position: toast.POSITION.TOP_RIGHT});
       setLoading(false);
       document.documentElement.style.scrollBehavior = "smooth";
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
       setShowForm(false);
-  
     } catch (error) {
-      toast.error("Something went wrong: " + error , {position: toast.POSITION.TOP_RIGHT});            
+      toast.error("Something went wrong: " + error, {
+        position: toast.POSITION.TOP_RIGHT,
+      });
     }
-    
+
     // setTimeout(function () {
     //   location.reload();
     // }, 3000);
-    
   };
 
   // -------------------------------------------------------------------------------------------------------
@@ -194,9 +193,7 @@ const SingleStepForm = ({setShowForm}) => {
             Exclusive Fall Solar Offers
           </p>
           <form className="flex flex-col mt-8 w-[280px] md:w-[450px] gap-3">
-            {error !== "" && (
-              <p className="text-red-500">{error}</p>
-            )}
+            {error !== "" && <p className="text-red-500">{error}</p>}
             <div className="flex bg-white border border-gray-300 w-full py-3 px-5 rounded-lg overflow-hidden focus-within:border-[#F4BC33]">
               <img
                 src="/images/user-icon.svg"
@@ -273,9 +270,8 @@ const SingleStepForm = ({setShowForm}) => {
               </div>
             </div>
 
-            
             <p className="text-[#295795] text-xl">Address*</p>
-            <GooglePlacesAutocomplete              
+            <GooglePlacesAutocomplete
               apiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY}
               autocompletionRequest={{
                 componentRestrictions: {
@@ -284,24 +280,22 @@ const SingleStepForm = ({setShowForm}) => {
               }}
               selectProps={{
                 address,
-                placeholder:"",                
+                placeholder: "",
                 onChange: setAddress,
-                
+
                 styles: {
                   input: (provided) => ({
                     ...provided,
                     maxWidth: "500px",
                     width: "500px",
                     height: "40px",
-                    padding: "0px 30px"                                        
+                    padding: "0px 30px",
                   }),
                 },
               }}
               className="w-[320px] md:w-[500px] "
               placeholder="hello"
             />
-
-            
 
             <div className="flex bg-white border border-gray-300 w-full py-3 px-5 rounded-lg overflow-hidden focus-within:border-[#F4BC33]">
               {/* <img src="/images/location-icon.svg" alt="" className="h-[17px] self-center" /> */}
@@ -327,9 +321,11 @@ const SingleStepForm = ({setShowForm}) => {
               onClick={formHandler}
               className="bg-[#295795] text-[#F4BC33] text-xl py-3 px-8 rounded-sm hover:bg-opacity-80 font-bold lg:w-[60%] lg:self-center flex items-center justify-center"
             >
-              
-              { !loading ? "GET OFFER" : <img src="/images/loading.gif" alt="" className="h-[40px]" />   }  
-
+              {!loading ? (
+                "GET OFFER"
+              ) : (
+                <img src="/images/loading.gif" alt="" className="h-[40px]" />
+              )}
             </button>
           </form>
         </div>
